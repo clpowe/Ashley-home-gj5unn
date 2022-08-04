@@ -1,0 +1,3495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+  </head>
+
+  <body>
+    <!-- Hero Banner -->
+    <section
+      id="homepage-main"
+      x-data="{
+        pretext: 'Sweet Deals, Suite Dreams',
+        maintext: 'Up to 30% Off*',
+        subtext:'select items, sitewide!',
+        code:'',
+        img:'images/homepage/20220802/FW32-33_HP_MB_1.jpg?$staticlink$',
+        imgXLDesktop:'images/homepage/20220802/FW32-33_HP_DK_1_2560x800.jpg?$staticlink$',
+        imgDesktop:'images/homepage/20220802/FW32-33_HP_DK_1_1440x450.jpg?$staticlink$',
+        imgTablet:'images/homepage/20220802/FW32-33_HP_DK_1_768x340.jpg?$staticlink$',
+        ariaLabel:'Ashleys Sweet Deals, Suite Dreams',
+        link:'/c/deals/furniture-price-cuts/',
+      }"
+    >
+      <div class="home__image-container">
+        <div class="home-content hero__container--start">
+          <div
+            class="
+              [
+              hero__content
+              ]
+              [
+              bg-cream
+              padding-block-2 padding-inline-2
+              ]
+              [
+              hotspot-image hotspot-v2-container
+              ]
+            "
+          >
+            <div class="">
+              <p
+                class="
+                  [
+                  text-uppercase
+                  font-weight-light
+                  letter-spacing
+                  flex-grow
+                  ]
+                "
+                x-text="pretext"
+              ></p>
+              <h2 x-text="maintext"></h2>
+              <p class="[ font-weight-bold ]" x-text="subtext"></p>
+              <p class="[ small ]" x-text="code"></p>
+            </div>
+            <!-- <p class="hero__text">bring comfort and clean to your home</p> -->
+            <a :href="link" :aria-label="ariaLabel">
+              <button class="button">shop now</button>
+            </a>
+          </div>
+        </div>
+        <picture>
+          <source :srcset="imgXLDesktop" media="(min-width: 1440px)" />
+          <source :srcset="imgDesktop" media="(min-width: 768px)" />
+          <source :srcset="imgTablet" media="(min-width: 486px)" />
+          <img class="home__image" :src="img" alt="" style="width: 100%" />
+        </picture>
+      </div>
+      <script
+        defer
+        src="https://unpkg.com/@alpinejs/intersect@3.x.x/dist/cdn.min.js"
+      ></script>
+      <script
+        defer
+        src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"
+      ></script>
+      <script
+        defer
+        src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"
+      ></script>
+    </section>
+
+    <!-- CSS -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+      :root {
+        --white-color: #f3f3f3;
+        --black-color: #363534;
+        --cream-color: #f2ece7;
+        --grey-200: #f7f7f7;
+
+        --fw-200: 300;
+        --fw-400: 400;
+        --fw-600: 700;
+
+        --box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+          rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        --transition: all 0.3s ease;
+
+        --size-fluid-7: clamp(4rem, 10vw, 10rem);
+
+        --flow-space: 1rem;
+
+        --bp-small: 48em; /* 768px */
+        --bp-medium: 64em; /* 1024px */
+        --bp-large: 85.375em; /* 1366px */
+        --bp-xlarge: 120em; /* 1920px */
+        --bp-xxlarge: 160em; /* 2560px */
+      }
+
+      [x-cloak] {
+        display: none !important;
+      }
+
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 150px;
+        overscroll-behavior: contain;
+      }
+
+      @media (min-width: 480px) {
+        html {
+          scroll-padding-top: 200px;
+        }
+      }
+
+      body {
+        margin: 0;
+      }
+
+      #wrapper {
+        overflow-x: unset;
+      }
+
+      .homepage-wrapper #main {
+        max-width: 160em;
+        box-sizing: border-box;
+        margin-inline: auto;
+      }
+
+      .homepage-wrapper #main h2 {
+        margin-left: 0;
+        margin-bottom: 0;
+      }
+
+      #homepage-main,
+      h1,
+      h2,
+      p,
+      figure,
+      blockquote,
+      div dl,
+      dd {
+        all: unset;
+        display: block;
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      #homepage-main {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: var(--fw-400);
+        position: relative;
+      }
+
+      #homepage-main h2 {
+        text-transform: lowercase;
+        font-weight: var(--fw-600);
+        line-height: 1.1;
+        max-width: 14ch;
+        font-size: clamp(28px, 4vw, 36px);
+      }
+
+      @media (min-width: 480px) {
+        #homepage-main h2 {
+          max-width: 30ch;
+        }
+      }
+
+      #homepage-main p {
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.6;
+      }
+
+      .homepage-wrapper #main .b1 img {
+        width: auto;
+      }
+
+      @media only screen and (max-width: 1024px) {
+        .homepage-wrapper #main .b1 div {
+          text-align: start;
+        }
+      }
+
+      #homepage-main a {
+        color: var(--black-color);
+        text-decoration: none;
+        overflow: unset;
+        transition: var(--transition);
+        will-change: auto;
+      }
+      #homepage-main a:hover {
+        font-weight: var(--fw-600);
+        color: unset;
+      }
+
+      .small {
+        font-size: 0.8rem;
+        line-height: 1.6;
+      }
+
+      .home-content {
+        inline-size: 100%;
+        margin-inline: auto;
+      }
+
+      @media (min-width: 480px) {
+        .home-content {
+          inline-size: min(100% - max(1rem, 5%), 1240px);
+        }
+      }
+
+      /* Composition */
+
+      .flow > :not(:first-child) {
+        margin-top: var(--flow-space, 1em);
+      }
+
+      .big-flow > :not(:first-child) {
+        margin-top: 4rem;
+      }
+
+      .padding-flow > .homepage__category:nth-child(odd) {
+        padding-inline: 0;
+        text-align: center;
+      }
+      .padding-flow > .homepage__category:nth-child(odd) > h2 {
+        margin-inline: auto;
+      }
+      .padding-flow > .homepage__category:nth-child(odd) > a {
+        margin-left: 1rem;
+      }
+
+      /* Utilities */
+
+      .margin-inline {
+        margin-inline: auto;
+      }
+
+      .ml-auto {
+        margin-left: auto;
+      }
+
+      .m-0 {
+        margin: 0;
+      }
+
+      .mb-2 {
+        margin-bottom: 0rem;
+      }
+      .mb-7 {
+        margin-bottom: clamp(2rem, 5vw, 7rem);
+      }
+
+      .bg-black {
+        background-color: var(--black-color);
+      }
+
+      .bg-cream {
+        background-color: var(--cream-color);
+      }
+
+      .bg-grey {
+        background-color: var(--grey-200);
+      }
+
+      .padding-block-1 {
+        padding-block: clamp(0.5rem, 0.1rem + 1vw, 1rem);
+      }
+      .padding-block-2 {
+        padding-block: clamp(1rem, 0.1rem + 1vw, 1.5rem);
+      }
+
+      .p-inline-1 {
+        padding-inline: 1rem;
+      }
+
+      .p-inline-2 {
+        padding-inline: 2rem;
+      }
+
+      .padding-inline-2 {
+        padding-inline: clamp(0.5rem, 1rem + 1vw, 2.5rem);
+      }
+
+      .text-start {
+        text-align: start;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .text-end {
+        text-align: end;
+      }
+
+      .text-light {
+        color: var(--white-color);
+      }
+
+      .text-uppercase {
+        text-transform: uppercase;
+      }
+
+      .text-lowercase {
+        text-transform: lowercase;
+      }
+
+      .font-weight-light {
+        font-weight: var(--fw-200);
+      }
+
+      .font-weight-bold {
+        font-weight: var(--fw-600);
+      }
+
+      .letter-spacing {
+        letter-spacing: 0.2em;
+      }
+
+      .flex-1 {
+        flex: 1;
+      }
+
+      .flex-5 {
+        flex: 5;
+      }
+
+      .flex-8 {
+        flex: 8;
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .flex-col {
+        flex-direction: column;
+      }
+
+      .flex-end {
+        justify-content: flex-end;
+      }
+
+      .self-center {
+        align-self: center;
+      }
+
+      /* Blocks */
+      #homepage-main .button {
+        all: unset;
+        text-align: center;
+        display: block;
+        cursor: pointer;
+        border: 0;
+        font-size: 14px;
+        border-radius: 0.25rem;
+        text-decoration: none;
+        color: var(--white-color);
+        background-color: var(--black-color);
+        font-weight: var(--fw-600);
+        padding: 0.8em 1em;
+      }
+
+      #homepage-main .button:hover,
+      .button:focus {
+        background-color: #454545;
+      }
+
+      #homepage-main .subtext {
+        line-height: 1.1;
+        letter-spacing: 3px;
+      }
+
+      #homepage-main .text-button {
+        font-size: clamp(0.9rem, 1px + 1vw, 1rem);
+        text-decoration: none;
+        border: none;
+        color: var(--black-color);
+        display: flex;
+        line-height: 1;
+        align-items: center;
+        letter-spacing: 2.4px;
+        font-weight: var(--fw-400);
+        text-transform: uppercase;
+      }
+      #homepage-main .category__link-container {
+        padding: 0.5rem 1rem;
+      }
+
+      .text-button:hover {
+        font-weight: var(--fw-600);
+      }
+
+      /* Advertisement */
+      .ad {
+        position: relative;
+      }
+
+      .ad__container {
+        position: relative;
+        max-width: 1280px;
+        width: 100%;
+        margin-inline: auto;
+        padding-inline: 0px;
+        display: block;
+        background-color: var(--black-color);
+        aspect-ratio: 2/1;
+      }
+
+      @media (min-width: 480px) {
+        .ad__container {
+          aspect-ratio: 8/1;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .ad__container {
+          height: 80px;
+        }
+      }
+
+      .ad__btn {
+        position: absolute;
+        top: 0;
+        right: 1%;
+        z-index: 1;
+        transition: var(--transition);
+        color: #fff;
+        will-change: auto;
+      }
+
+      .rotate {
+        transform: rotate(180deg);
+      }
+
+      .ad__close-container {
+        position: relative;
+        max-width: 1280px;
+        margin-inline: auto;
+      }
+
+      .ad__banner-text {
+        padding-block: 7px;
+        font-size: 1rem;
+        text-align: center;
+        text-transform: uppercase;
+        color: rgb(250, 250, 250);
+        letter-spacing: 3px;
+        font-weight: var(--fw-400);
+      }
+
+      .ad__banner-text > span {
+        font-weight: var(--fw-600);
+        text-transform: lowercase;
+        letter-spacing: 1px;
+      }
+
+      /* End Advertisment */
+
+      .container {
+        max-width: 1280px;
+        margin-inline: auto;
+        padding-inline: 0px;
+        display: block;
+      }
+
+      /* category Menu */
+      .homepage__menu {
+        position: sticky;
+        top: 0;
+        background-color: #fff;
+        box-shadow: var(--shadow-4);
+      }
+
+      .homepage__menu--mobile {
+        width: 300px;
+        display: block;
+        margin-inline: auto;
+        border-radius: 4px 4px 4px 4px;
+        position: absolute;
+        left: 50%;
+        transform: translateY(-50%);
+        transform: translateX(-50%);
+        background-color: #fff;
+        border: 1px solid var(--black-color);
+        overflow: hidden;
+        transition: var(--transition);
+        will-change: auto;
+        align-items: center;
+      }
+
+      @media (min-width: 480px) {
+        .homepage__menu--mobile {
+          width: 440px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .homepage__menu--mobile {
+          display: none;
+        }
+      }
+
+      .homepage__menu--mobile-btn {
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+        padding-inline: 24px;
+        padding-block: 8px;
+        text-align: left;
+        border: none;
+        margin: 0;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        transform: var(--transition);
+        will-change: auto;
+        align-items: center;
+      }
+
+      .homepage__menu--mobile-btn > svg {
+        transform: rotate(90deg);
+      }
+
+      .homepage__menu--mobile-btn .drop {
+        transform: rotate(-90deg);
+      }
+
+      .homepage__menu--mobile-btn--gray {
+        background-color: #f7f7f7;
+      }
+
+      .homepage__menu--mobile-panel {
+        background-color: #fff;
+        transition: var(--transition);
+        will-change: auto;
+      }
+
+      .homepage__menu--mobile--open {
+        box-shadow: var(--box-shadow);
+      }
+
+      .homepage__menu--mobile-panel > ul > li {
+        list-style-type: none;
+        color: #333;
+        letter-spacing: 3px;
+        font-size: 16px;
+        text-transform: uppercase;
+        padding-block: 1rem;
+        padding-inline: 24px;
+        border-bottom: 1px solid #f7f7f7;
+      }
+
+      .homepage__menu--desktop {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        .homepage__menu--desktop {
+          display: block;
+        }
+      }
+
+      .homepage__menu--desktop > ul {
+        display: flex;
+        max-width: 1240px;
+        margin-inline: auto;
+        gap: 1rem;
+        justify-content: space-between;
+        padding: var(--size-fluid-1);
+      }
+
+      .homepage__menu-list-item {
+        cursor: pointer;
+        list-style-type: none;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        text-align: center;
+        font-size: clamp(14px, 1vw, 16px);
+      }
+
+      .homepage-h2 {
+        display: none;
+        margin-block: var(--size-fluid-3);
+        text-align: center;
+        font-size: 28px;
+        font-weight: var(--fw-600);
+      }
+
+      @media (min-width: 768px) {
+        .homepage-h2 {
+          display: block;
+        }
+      }
+
+      .stickey {
+        position: sticky;
+        top: 53px;
+        padding: 20px;
+        box-shadow: var(--box-shadow);
+        min-height: 40px;
+        z-index: 5;
+        background-color: #fff;
+      }
+
+      @media (min-width: 480px) {
+        .stickey {
+          min-height: 40px;
+          top: 106px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .stickey {
+          position: relative;
+          min-height: max-content;
+          top: 0px;
+          box-shadow: none;
+        }
+      }
+
+      .homepage__category {
+        max-width: 1280px;
+        margin-inline: auto;
+        margin-block: var(--font-size-fluid-2);
+        padding-inline: 2%;
+        display: grid;
+        grid-template-rows: 3;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--size-fluid-1);
+      }
+
+      .category__h2 {
+        grid-column: 1/-1;
+      }
+
+      .category__items-container {
+        display: none;
+
+        grid-template-columns: repeat(2, 1fr);
+        grid-column: 7/-1;
+        gap: 1rem;
+        grid-row: span 2;
+      }
+
+      @media (min-width: 768px) {
+        .category__items-container {
+          display: grid;
+        }
+      }
+
+      .category__item {
+        text-align: center;
+        background-color: var(--white-color);
+        color: var(--black-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0.5rem;
+      }
+
+      .category__item-image {
+        max-inline-size: 100%;
+        display: block;
+        height: auto;
+        margin-inline: auto;
+        filter: drop-shadow(0 1px 1px rgba(136, 136, 136, 0.4))
+          drop-shadow(0 2px 2px rgba(136, 136, 136, 0.4));
+        transition: var(--transition);
+        margin-bottom: 3rem;
+        will-change: auto;
+      }
+
+      .category__item-image:hover {
+        transform: translateY(-4px) scale(1.05);
+        filter: drop-shadow(0 6px 6px rgba(136, 136, 136, 0.5))
+          drop-shadow(0 2px 2px rgba(136, 136, 136, 0.3));
+      }
+
+      .category__image {
+        grid-column: 1/7;
+      }
+
+      .category__image img {
+        max-inline-size: 100%;
+        display: block;
+        object-fit: cover;
+        width: 100%;
+      }
+
+      .category__link-container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        grid-row: 3;
+        grid-column: span 2;
+        background-color: none;
+      }
+
+      .category__link {
+        grid-row: 3;
+        text-align: start;
+        text-transform: uppercase;
+        font-weight: var(--fw-400);
+        letter-spacing: 2px;
+        position: relative;
+        line-height: 19px;
+      }
+
+      .category__item-text {
+        font-size: 14px;
+      }
+
+      @media (min-width: 768px) {
+        .category__link-container {
+          justify-content: flex-end;
+          text-align: end;
+          grid-row: 3;
+          grid-column: 1/7;
+          background-color: var(--white-color);
+        }
+
+        .category__image img {
+          max-inline-size: 100%;
+          display: block;
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+
+      .active {
+        position: relative;
+        font-weight: var(--fw-600);
+      }
+
+      .active::after {
+        content: '';
+        position: absolute;
+        display: block;
+        background-color: #363534;
+        height: 2px;
+        width: 100%;
+        bottom: -10px;
+        left: 0;
+        transform-origin: top right;
+        transition: var(--transition);
+        will-change: auto;
+      }
+
+      .category-enter {
+        animation: var(--animation-fade-in);
+      }
+
+      .category-leave {
+        animation: var(--animation-fade-out);
+      }
+
+      /* Scroll Section */
+
+      /* Corporate Section */
+      .corporate-one {
+        display: grid;
+        gap: 1rem;
+      }
+
+      .corporate-one__item {
+        text-align: center;
+        padding: var(--font-size-fluid-1) var(--font-size-fluid-2);
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-items: center;
+      }
+
+      .corporate-one__item p {
+        max-width: 35ch;
+      }
+
+      .corporate-one__item > img {
+        width: 72px;
+        margin-inline: auto;
+      }
+
+      @media (min-width: 768px) {
+        .corporate-one {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          gap: 1rem;
+        }
+      }
+
+      .corporate-two {
+        display: grid;
+        margin-block: var(--size-fluid-7);
+        background-color: var(--white-color);
+      }
+
+      .corporate-two__item {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 3rem;
+        margin-top: 3rem;
+        margin-inline: 1rem;
+        justify-content: space-between;
+        gap: 1rem;
+      }
+      .corporate-two__item > h3 {
+        padding: 0;
+      }
+      .corporate-two div:not(:last-child) {
+        border-right: none;
+        border-bottom: 1px solid var(--black-color);
+      }
+
+      .corporate-two__item p {
+        max-width: 35ch;
+      }
+
+      .corporate-two__item > img {
+        width: 72px;
+        margin-inline: auto;
+      }
+
+      @media (min-width: 768px) {
+        .corporate-two {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          padding: 2rem;
+          gap: 1rem;
+        }
+        .corporate-two__item {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 0;
+          margin-top: 0;
+          margin-inline: 0;
+          padding: 2rem;
+          justify-content: space-between;
+        }
+        .corporate-two div:not(:last-child) {
+          border-right: 1px solid var(--black-color);
+          border-bottom: none;
+        }
+      }
+
+      .hero__container {
+        inline-size: 100%;
+        margin-inline: auto;
+      }
+
+      .home__image-container {
+        position: relative;
+        overflow: hidden;
+        max-height: 693px;
+        background-color: var(--cream-color);
+      }
+
+      .home__image {
+        width: 100%;
+        margin-inline: auto;
+        display: block;
+        min-height: 340px;
+        object-fit: cover;
+        object-position: right;
+        aspect-ratio: 16/5;
+      }
+
+      .hero__content {
+        display: flex;
+        flex-direction: row;
+        align-items: end;
+        justify-content: center;
+        height: 100%;
+        gap: 1rem;
+      }
+
+      .hero__content .small {
+        font-size: clamp(12px, 0.5px + 2vw, 14px);
+        font-weight: var(--fw-200);
+        letter-spacing: 0.2em;
+      }
+
+      .hero__content p {
+        font-size: clamp(14px, 1px + 2vw, 20px);
+      }
+
+      .hero__content h2 {
+        font-size: clamp(24px, 1px + 3vw, 36px);
+      }
+
+      .home-btn {
+        font-size: 14px;
+        font-weight: var(--fw-600);
+        border-radius: 4px;
+        padding: 14px 20px;
+        display: block;
+        border: none;
+      }
+
+      @media (min-width: 480px) {
+        .hero__container--start {
+          justify-content: start;
+        }
+        .hero__container--end {
+          justify-content: end;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .hero__container {
+          display: flex;
+          flex-direction: column;
+          inline-size: min(100% - max(2rem, 5%), 1280px);
+          margin-inline: auto;
+        }
+        .hero__content {
+          position: absolute;
+          top: 0;
+          flex-direction: column;
+          align-items: start;
+          max-width: 305px;
+        }
+      }
+
+      .categories {
+        text-align: center;
+      }
+
+      .categories__title {
+        margin-inline: auto;
+      }
+
+      .subheroAd-container {
+        inline-size: min(100% - max(2rem, 5%), 1280px);
+        display: grid;
+        position: relative;
+      }
+
+      #homepage-main .subheroAd-text {
+        font-size: 24px;
+        font-weight: var(--fw-600);
+        line-height: 1.1;
+      }
+
+      .subheroAd-container > a {
+        display: flex;
+        margin-inline: auto;
+        gap: 2rem;
+        align-content: center;
+        align-items: center;
+      }
+
+      .subheroAd-secondary {
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.3em;
+      }
+
+      @media (min-width: 768px) {
+        .subheroAd {
+          display: block;
+        }
+      }
+
+      .finacing {
+        max-width: 1000px;
+        margin-inline: auto;
+        padding-inline: 1rem;
+      }
+
+      .finacing-container {
+        display: flex;
+        flex-direction: column;
+        margin-block: 1rem;
+        padding-block: 1rem;
+        position: relative;
+        gap: 0.5rem;
+      }
+
+      .finacing-container::before {
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        top: 0;
+        background-color: #333;
+      }
+
+      .finacing-container::after {
+        content: '';
+        position: absolute;
+        height: 1px;
+        bottom: 0;
+        width: 100%;
+        background-color: #333;
+      }
+
+      .finacing-image {
+        grid-row: span 2;
+        width: 64px;
+        height: auto;
+        margin-block: auto;
+      }
+
+      .finacing-content {
+        grid-row: span 2;
+        grid-column: span 2;
+        display: flex;
+        margin-block: auto;
+        flex-direction: column;
+      }
+
+      .finacing-button {
+        align-self: start;
+      }
+
+      .finacing-actions {
+        grid-column: 2;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: baseline;
+      }
+
+      .finacing-text-btn {
+        position: relative;
+        text-transform: uppercase;
+        letter-spacing: 2.4px;
+        font-weight: var(--fw-400);
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+      }
+
+      .finacing-subhead {
+        font-size: 14px;
+        font-weight: var(--fw-200);
+        text-transform: uppercase;
+        letter-spacing: 3px;
+      }
+
+      .finacing-small-text {
+        font-size: 12px;
+        max-width: 65ch;
+        align-self: end;
+      }
+
+      #homepage-main .finacing-head {
+        font-size: 24px;
+        font-weight: var(--fw-600);
+        line-height: 1.1;
+        text-transform: lowercase;
+      }
+
+      @media (min-width: 480px) {
+        .finacing-container {
+          display: grid;
+          grid-template-columns: auto auto auto;
+          grid-template-rows: 1fr;
+          gap: 0;
+          column-gap: 1rem;
+        }
+
+        .finacing__content {
+          grid-column: span 2;
+        }
+
+        .finacing-small-text {
+          grid-column: 2;
+        }
+
+        .finacing-button {
+          align-self: end;
+        }
+
+        .finacing-actions {
+          grid-column: 3;
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+        }
+
+        .finacing-head {
+          font-size: 24px;
+        }
+
+        .finacing-subhead {
+          font-size: 16px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .finacing-container {
+          grid-template-columns: auto auto auto auto;
+          grid-template-rows: max-content;
+          row-gap: 0.5rem;
+        }
+
+        .finacing-small-text {
+          grid-column: 4;
+        }
+
+        .finacing-button {
+          align-self: end;
+          justify-self: end;
+          grid-column: -1;
+        }
+
+        .category__image img {
+          max-inline-size: 100%;
+          display: block;
+          aspect-ratio: unset;
+          height: 100%;
+        }
+      }
+
+      .mobile {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+      }
+
+      .desktop {
+        display: none;
+      }
+
+      @media (min-width: 768px) {
+        .mobile {
+          display: none;
+        }
+
+        .desktop {
+          display: grid;
+          gap: 1rem;
+          grid-template-columns: repeat(8, 1fr);
+        }
+      }
+
+      .scroll_section {
+        display: grid;
+        grid-template-columns: 1fr;
+        position: relative;
+        gap: 1rem;
+        margin-block: var(--size-fluid-7);
+      }
+
+      .scroll_section_actions {
+        color: var(--black-color);
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        grid-column: span 3;
+      }
+
+      .scroll_section_actions > div {
+        padding-left: 0.5rem;
+      }
+
+      .media-scroller {
+        display: grid;
+        grid-row: 2;
+        grid-auto-flow: column;
+        grid-auto-columns: 90%;
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        overscroll-behavior-inline: contain;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+
+      .media-scroller::-webkit-scrollbar {
+        display: none;
+      }
+
+      .slide-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 48px;
+        width: 48px;
+      }
+
+      .slide-btn:hover {
+        box-shadow: var(--box-shadow);
+      }
+
+      .slide-btn-right {
+        right: 0%;
+      }
+      .slide-btn-left {
+        left: 0%;
+        transform: scaleX(-1) translateY(-50%);
+      }
+
+      @media (min-width: 480px) {
+        .media-scroller {
+          grid-auto-columns: 40%;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .media-scroller {
+          grid-auto-columns: 23%;
+        }
+        .scroll_section > h2 {
+          grid-column: 2;
+        }
+        .scroll_section_actions {
+          grid-column: 3;
+          justify-content: flex-end;
+        }
+        .scroll_section {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .media-scroller {
+          grid-column: span 3;
+        }
+      }
+
+      .media-element {
+        display: grid;
+        gap: 1rem;
+        grid-template-rows: min-content;
+        border-radius: 4px;
+      }
+
+      .media-element-img {
+        inline-size: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+      }
+
+      .media-element-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-inline: 0.5rem;
+      }
+
+      #homepage-main .media-element-content a {
+        color: var(--black-color);
+        font-weight: var(--fw-600);
+      }
+
+      .snaps-inline {
+        scroll-snap-type: inline mandatory;
+      }
+
+      .snaps-inline > * {
+        scroll-snap-align: start;
+      }
+
+      .feature {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .feature-content {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .feature_actions {
+        all: unset;
+        grid-row: 3;
+        background-color: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        padding-block: 1rem;
+        align-items: center;
+      }
+
+      .feature__img {
+        max-inline-size: 100%;
+        aspect-ratio: 1/1;
+      }
+
+      .feature__link {
+        color: var(--black-color);
+        font-weight: var(--fw-200);
+        cursor: pointer;
+      }
+
+      .feature__items {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 80%;
+        gap: 1rem;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        overscroll-behavior-inline: contain;
+      }
+
+      .feature__item {
+        display: grid;
+        place-content: center;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto;
+        box-sizing: border-box;
+        padding: 1rem;
+        position: relative;
+        gap: 1rem;
+      }
+
+      .item-holder {
+        overflow: auto;
+      }
+
+      .feature__item_img > img {
+        max-inline-size: 100%;
+        display: block;
+      }
+
+      .feature__item_content {
+        display: flex;
+        grid-column: span 2;
+        flex-direction: column;
+        align-self: center;
+      }
+
+      .feature__item_text {
+        font-size: 14px;
+        line-height: 1.2em;
+        font-weight: var(--fw-600);
+        text-align: start;
+      }
+
+      .feature__item_price {
+        font-weight: var(--fw-200);
+        font-size: 14px;
+        text-align: start;
+      }
+
+      .feature__item .feature_actions {
+        background-color: transparent;
+        justify-content: start;
+        padding: 0;
+        margin-top: auto;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+      }
+      .feature__item .feature_actions > p {
+        background-color: none;
+      }
+
+      @media (min-width: 480px) {
+        a.feature_actions {
+          justify-content: end;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .feature {
+          grid-template-columns: 2fr 1fr;
+          grid-template-rows: auto;
+        }
+
+        .feature-content {
+          flex-direction: row;
+          gap: 1rem;
+        }
+
+        .feature-heading {
+          grid-column: span 2;
+        }
+
+        .feature__items {
+          display: grid;
+          grid-auto-flow: row;
+          grid-auto-rows: 1fr;
+          display: grid;
+          grid-auto-columns: 1fr;
+        }
+
+        .feature__item {
+          margin-inline: 0;
+        }
+      }
+
+      .instock {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-block: var(--size-fluid-7);
+      }
+
+      .instock-item {
+        display: inline-flexbox;
+        position: relative;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #homepage-main.instock-content-subhead a:hover {
+        font-weight: var(--fw-200);
+      }
+
+      #homepage-main .text-button a:hover {
+        font-weight: var(--fw-600);
+      }
+
+      .instock-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        width: fit-content;
+      }
+
+      .instock-item-img {
+        aspect-ratio: 16/9;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 1rem;
+      }
+
+      #homepage-main .instock-content > .instock-content-subhead {
+        font-size: clamp(0.8rem, 2vw, 1rem);
+        letter-spacing: 0.3rem;
+        color: var(--black-color);
+      }
+
+      #homepage-main .instock-content-head {
+        font-size: clamp(1.2rem, 3vw, 2rem);
+        color: var(--black-color);
+        font-weight: var(--fw-600);
+        line-height: 1.1;
+      }
+
+      @media (min-width: 768px) {
+        .instock {
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+        }
+      }
+
+      .feature_section {
+        margin-block: var(--size-fluid-7);
+        display: grid;
+        gap: 1rem;
+      }
+
+      .feature_section-header {
+        padding-bottom: 1rem;
+      }
+
+      /* Corporate Section End */
+    </style>
+
+    <!-- Sub Hero Ad -->
+    <section
+      x-data="{
+        subText:'Buy any qualifying mattress, get $150 off^ your bedroom purchase of $1,000 or more.',
+        text:'Shop Mattresses',
+        link:'/c/deals/sale-bedroom/',
+        ariaLabel:'Buy any qualifying mattress, get $150 off^ your bedroom purchase of $1,000 or more'
+      }"
+      id="homepage-main"
+    >
+      <div
+        class="
+          subheroAd
+          [
+          padding-block-2
+          bg-black
+          text-center text-light
+          ]
+          [
+          hotspot-image hotspot-v2-container
+          ]
+        "
+      >
+        <div class="subheroAd-container [ home-content ]">
+          <a :aria-label="ariaLabel" :href="link" style="color: unset">
+            <div>
+              <p
+                class="[ subtext ] [ text-uppercase font-weight-light ]"
+                x-text="subText"
+              ></p>
+              <p
+                class="[ subheroAd-text ] [ text-lowercase ]"
+                x-text="text"
+              ></p>
+            </div>
+            <svg
+              class="[ self-center ]"
+              version="1.2"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              overflow="visible"
+              preserveAspectRatio="none"
+              viewBox="0 0 26 26"
+              width="24"
+              height="24"
+              fill="none"
+            >
+              <g transform="translate(1, 1)">
+                <path
+                  fill="#fff"
+                  d="m10.8788 17.657-1.41396-1.414 4.24196-4.243-4.24196-4.24298 1.41396-1.414 5.656 5.65698z"
+                  vector-effect="non-scaling-stroke"
+                />
+              </g>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Finacing Ad -->
+    <section
+      x-data="{
+        image:'',
+        subhead:'SPECIAL FINANCING OFFER',
+        head:'Interest Free Financing through August 2027**',
+        details:'$3,999 minimum purchase required for Ashley Advatnage&trade; Synchrony purchases. Subject to credit approval. 60 equal monthly payments required. Click details for more information.',
+        link:'https://etail.mysynchrony.com/eapply/eapply.action?uniqueId=565510A04C0A508AC067D9B072C9D4F57DB34A98269D02B5&preQual=Y&siteCode=ASHLEYHOMEHUPQ',
+        linkText:'see if you prequalify',
+        ariaLabel:'prequalify now',
+        detailsLink: '/coupons-deals-and-offers/',
+        detailsariaLabel:'Finance Details',
+      }"
+      id="homepage-main"
+    >
+      <div class="finacing [ mb-7 ] [ hotspot-image hotspot-v2-container ]">
+        <div class="[ finacing-container ][ home-content ]">
+          <div>
+            <svg
+              version="1.2"
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              overflow="visible"
+              preserveAspectRatio="none"
+              viewBox="0 0 56.314998626708984 48"
+              height="54"
+              width="63"
+            >
+              <g transform="translate(1, 1)">
+                <defs>
+                  <clipPath
+                    id="clip-path_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  >
+                    <rect
+                      fill="none"
+                      transform="translate(-2 -2)"
+                      height="46"
+                      width="54.315"
+                      id="Rectangle_261848_1656005520628"
+                      vector-effect="non-scaling-stroke"
+                    />
+                  </clipPath>
+                </defs>
+                <g transform="translate(2 2)" id="Group_302483_1656005520628">
+                  <rect
+                    fill="#333"
+                    transform="translate(44.291 34.68)"
+                    height="1.707"
+                    width="0.777"
+                    id="Rectangle_261832_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <rect
+                    fill="#333"
+                    transform="translate(42.227 34.68)"
+                    height="1.707"
+                    width="0.777"
+                    id="Rectangle_261833_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <rect
+                    fill="#333"
+                    transform="translate(40.163 34.68)"
+                    height="1.707"
+                    width="0.777"
+                    id="Rectangle_261834_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <rect
+                    fill="#333"
+                    transform="translate(38.1 34.68)"
+                    height="1.707"
+                    width="0.777"
+                    id="Rectangle_261835_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <rect
+                    fill="#333"
+                    transform="translate(34.954 34.68)"
+                    height="1.707"
+                    width="0.777"
+                    id="Rectangle_261836_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <rect
+                    fill="#333"
+                    transform="translate(32.89 34.68)"
+                    height="1.707"
+                    width="0.777"
+                    id="Rectangle_261837_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <rect
+                    fill="#333"
+                    transform="translate(30.826 34.68)"
+                    height="1.707"
+                    width="0.777"
+                    id="Rectangle_261838_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <rect
+                    fill="#333"
+                    transform="translate(28.763 34.68)"
+                    height="1.707"
+                    width="0.777"
+                    id="Rectangle_261839_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <rect
+                    fill="#333"
+                    transform="translate(25.616 34.68)"
+                    height="1.707"
+                    width="0.777"
+                    id="Rectangle_261840_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <rect
+                    fill="#333"
+                    transform="translate(23.553 34.68)"
+                    height="1.707"
+                    width="0.777"
+                    id="Rectangle_261841_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <rect
+                    fill="#333"
+                    transform="translate(21.489 34.68)"
+                    height="1.707"
+                    width="0.777"
+                    id="Rectangle_261842_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <rect
+                    fill="#333"
+                    transform="translate(19.426 34.68)"
+                    height="1.707"
+                    width="0.777"
+                    id="Rectangle_261843_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <rect
+                    fill="#333"
+                    transform="translate(16.28 34.68)"
+                    height="1.707"
+                    width="0.777"
+                    id="Rectangle_261844_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <rect
+                    fill="#333"
+                    transform="translate(14.216 34.68)"
+                    height="1.707"
+                    width="0.777"
+                    id="Rectangle_261845_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <rect
+                    fill="#333"
+                    transform="translate(12.152 34.68)"
+                    height="1.707"
+                    width="0.777"
+                    id="Rectangle_261846_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <rect
+                    fill="#333"
+                    transform="translate(10.089 34.68)"
+                    height="1.707"
+                    width="0.777"
+                    id="Rectangle_261847_1656005520628"
+                    vector-effect="non-scaling-stroke"
+                  />
+                  <g id="Group_302482_1656005520628">
+                    <g
+                      clip-path="url(#clip-path_1656005520628)"
+                      id="Group_302481_1656005520628"
+                    >
+                      <path
+                        stroke-width="0.5"
+                        stroke="#333"
+                        fill="#333"
+                        transform="translate(-24.241 -57.037)"
+                        d="M69.241,70.779H34.4A4.321,4.321,0,0,0,30.082,75.1V94.721A4.321,4.321,0,0,0,34.4,99.037H69.241a4.321,4.321,0,0,0,4.316-4.316V75.1a4.321,4.321,0,0,0-4.316-4.316M72.78,94.721a3.543,3.543,0,0,1-3.539,3.539H34.4a3.543,3.543,0,0,1-3.539-3.539V92.639h0V75.1A3.543,3.543,0,0,1,34.4,71.556H69.241A3.544,3.544,0,0,1,72.78,75.1Z"
+                        id="Path_423877_1656005520628"
+                        vector-effect="non-scaling-stroke"
+                      />
+                      <path
+                        stroke-width="0.5"
+                        stroke="#323332"
+                        fill="#333"
+                        transform="translate(0 0)"
+                        d="M5.064,29.8,2.718,21.044l2.346-.629v-.8l-2.547.682L1.165,15.251,41.658,4.4l1.351,5.044L29.868,12.966h3l10.342-2.771.742,2.771h.8L42.141,3.2A4.316,4.316,0,0,0,36.855.149L3.2,9.166A4.32,4.32,0,0,0,.147,14.452L5.064,32.8ZM.9,14.251A3.543,3.543,0,0,1,3.4,9.916L37.056.9a3.54,3.54,0,0,1,4.335,2.5l.067.249L.964,14.5Z"
+                        id="Path_423878_1656005520628"
+                        vector-effect="non-scaling-stroke"
+                      />
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class="finacing-content">
+            <p class="finacing-subhead [ subtext ]" x-text="subhead"></p>
+            <p class="finacing-head" x-text="head"></p>
+          </div>
+
+          <p class="finacing-small-text" x-text="details"></p>
+          <div class="[ finacing-button ]">
+            <a class="[ finacing ][ text-button ]" :aria-label="ariaLabel">
+              <p class="finance-dk2-pq" x-text="linkText"></p>
+              <svg
+                version="1.2"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                overflow="visible"
+                preserveAspectRatio="none"
+                viewBox="0 0 26 26"
+                width="24"
+                height="24"
+                fill="inherit"
+              >
+                <g transform="translate(1, 1)">
+                  <path
+                    fill="inherit"
+                    d="m10.8788 17.657-1.41396-1.414 4.24196-4.243-4.24196-4.24298 1.41396-1.414 5.656 5.65698z"
+                    vector-effect="non-scaling-stroke"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
+          <a
+            class="finacing-details"
+            :href="detailsLink"
+            :aria-label="detailsariaLabel"
+            >details</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop by category-->
+    <section
+      x-data="{ tab: 'bedroom', 
+
+          shown: false, 
+
+          categories:[ 
+
+          { 
+
+          id:1, 
+
+          category:'Bedroom', 
+
+          title:'bedroom', 
+
+          anchor:'#bedroom', 
+
+          copy: 'new restful retreat', 
+
+          mainImage:'images/homepage/20220802/FW32-33_HP_DK_2B.jpg?$staticlink$', 
+          tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2B.jpg?$staticlink$',
+          mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2B.jpg?$staticlink$',
+          altText:'bedroom', 
+
+          linktext:'shop all bedroom', 
+
+          ariaLabel:'bedroom', 
+
+          link:'/c/bedroom/', 
+
+          items:[ 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2A_1.png?$staticlink$', 
+
+          text:'bedroom sets', 
+
+          altText:'bedroom sets', 
+
+          ariaLabel:'bedroom sets', 
+
+          link:'/c/furniture/sets/bedroom-sets/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2A_2.png?$staticlink$', 
+
+          text:'beds', 
+
+          altText:'beds', 
+
+          ariaLabel:'beds', 
+
+          link:'/c/furniture/bedroom/beds/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2A_3.png?$staticlink$', 
+
+          text:'headboards', 
+
+          altText:'headboards', 
+
+          ariaLabel:'headboards', 
+
+          link:'/c/furniture/bedroom/headboards/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2A_4.png?$staticlink$', 
+
+          text:'dressers & chests', 
+
+          altText:'dressers & chests', 
+
+          ariaLabel:'dressers & chests', 
+
+          link:'/c/furniture/bedroom/dressers/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2A_5.png?$staticlink$', 
+
+          text:'mirrored dressers', 
+
+          altText:'mirrored dressers', 
+
+          ariaLabel:'mirrored dressers', 
+
+          link:'/c/furniture/bedroom/dressers/mirrored/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2A_6.png?$staticlink$', 
+
+          text:'nightstands', 
+
+          altText:'nightstands', 
+
+          ariaLabel:'nightstands', 
+
+          link:'/c/furniture/bedroom/nightstands/' 
+
+          }, 
+
+          ]  
+
+          }, 
+
+          { 
+
+          id:2, 
+
+          category:'Living Room', 
+
+          title:'living room', 
+
+          anchor:'#livingroom', 
+
+          copy: 'for the most lived-in room', 
+
+          mainImage:'images/homepage/20220802/FW32-33_HP_DK_2D.jpg?$staticlink$', 
+          tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2D.jpg?$staticlink$',
+          mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2D.jpg?$staticlink$',
+          altText:'living room', 
+
+          linktext:'Shop all living room', 
+
+          ariaLabel:'living room', 
+
+          link:'/c/furniture/living-room/', 
+
+          items:[ 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2B_1.png?$staticlink$', 
+
+          text:'sectionals', 
+
+          altText:'sectionals', 
+
+          ariaLabel:'sectionals', 
+
+          link:'/c/furniture/living-room/sectional-sofas/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2B_2.png?$staticlink$', 
+
+          text:'sofas & couches', 
+
+          altText:'sofas & couches', 
+
+          ariaLabel:'sofas & couches', 
+
+          link:'/c/furniture/living-room/sofas/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2B_3.png?$staticlink$', 
+
+          text:'loveseats', 
+
+          altText:'loveseats', 
+
+          ariaLabel:'loveseats', 
+
+          link:'/c/furniture/living-room/loveseats/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2B_4.png?$staticlink$', 
+
+          text:'reclining furniture', 
+
+          altText:'reclining furniture', 
+
+          ariaLabel:'reclining furniture', 
+
+          link:'/c/furniture/living-room/reclining-furniture/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2B_5.png?$staticlink$', 
+
+          text:'coffee tables', 
+
+          altText:'coffee tables', 
+
+          ariaLabel:'coffee tables', 
+
+          link:'/c/furniture/living-room/coffee-tables/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2B_6.png?$staticlink$', 
+
+          text:'tv stands', 
+
+          altText:'tv stands', 
+
+          ariaLabel:'tv stands', 
+
+          link:'/c/furniture/living-room/tv-stands/' 
+
+          }, 
+
+          ]  
+
+          }, 
+
+          { 
+
+          id:3, 
+
+          category:'Dining', 
+
+          title:'diningroom', 
+
+          anchor:'#diningroom', 
+
+          copy: 'please, pass the style', 
+
+          mainImage:'images/homepage/20220802/FW32-33_HP_DK_2A.jpg?$staticlink$', 
+          tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2A.jpg?$staticlink$',
+          mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2A.jpg?$staticlink$',
+          altText:'dining room', 
+
+          linktext:'Shop all dining', 
+
+          ariaLabel:'dining room', 
+
+          link:'/c/furniture/kitchen-and-dining-room/', 
+
+          items:[ 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2C_1.png?$staticlink$', 
+
+          text:'dining room sets', 
+
+          altText:'dining room sets', 
+
+          ariaLabel:'dining room sets', 
+
+          link:'/c/furniture/sets/dining-room-sets/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2C_2.png?$staticlink$', 
+
+          text:'dining tables', 
+
+          altText:'dining tables', 
+
+          ariaLabel:'dining tables', 
+
+          link:'/c/furniture/kitchen-and-dining-room/dining-room-tables/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2C_3.png?$staticlink$', 
+
+          text:'dining chairs', 
+
+          altText:'dining chairs', 
+
+          ariaLabel:'dining chairs', 
+
+          link:'/c/furniture/kitchen-and-dining-room/chairs/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2C_4.png?$staticlink$', 
+
+          text:'dining benches', 
+
+          altText:'dining benches', 
+
+          ariaLabel:'dining benches', 
+
+          link:'/c/furniture/kitchen-and-dining-room/dining-benches/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2C_5.png?$staticlink$', 
+
+          text:'bar stools', 
+
+          altText:'bar stools', 
+
+          ariaLabel:'bar stools', 
+
+          link:'/c/furniture/kitchen-and-dining-room/bar-stools/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2C_6.png?$staticlink$', 
+
+          text:'dining storage', 
+
+          altText:'dining storage', 
+
+          ariaLabel:'dining storage', 
+
+          link:'/c/furniture/kitchen-and-dining-room/dining-storage/' 
+
+          }, 
+
+          ]  
+
+          }, 
+
+          { 
+
+          id:4, 
+
+          category:'Mattress', 
+
+          title:'mattress', 
+
+          anchor:'#mattress', 
+
+          copy: 'better sleep delivered', 
+
+          mainImage:'images/homepage/20220802/FW32-33_HP_DK_2C.jpg?$staticlink$', 
+          tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2C.jpg?$staticlink$',
+          mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2C.jpg?$staticlink$',
+          altText:'mattress', 
+
+          linktext:'Shop all mattress', 
+
+          ariaLabel:'mattress', 
+
+          link:'/c/mattresses/', 
+
+          items:[ 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2D_1.png?$staticlink$', 
+
+          text:'soft/plush support', 
+
+          altText:'soft/plush support', 
+
+          ariaLabel:'soft/plush support', 
+
+          link:'/c/mattresses/shop-all-mattresses/plush_support/'
+
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2D_2.png?$staticlink$', 
+
+          text:'medium support', 
+
+          altText:'medium support', 
+
+          ariaLabel:'medium support', 
+
+          link:'/c/mattresses/shop-all-mattresses/medium_support/'
+
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2D_3.png?$staticlink$', 
+
+          text:'firm support', 
+
+          altText:'firm support', 
+
+          ariaLabel:'firm support', 
+
+          link:'/c/mattresses/shop-all-mattresses/firm_support/'
+
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2D_4.png?$staticlink$', 
+
+          text:'memory foam', 
+
+          altText:'memory foam', 
+
+          ariaLabel:'memory foam', 
+
+          link:'/c/mattresses/shop-all-mattresses/memory_foam/'
+
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2D_5.png?$staticlink$', 
+
+          text:'inner spring', 
+
+          altText:'inner spring', 
+
+          ariaLabel:'inner spring', 
+
+          link:'/c/mattresses/shop-all-mattresses/inner_spring/'
+
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2D_6.png?$staticlink$', 
+
+          text:'hybrid', 
+
+          altText:'hybrid', 
+
+          ariaLabel:'hybrid', 
+
+          link:'/c/mattresses/shop-all-mattresses/hybrid/'
+
+
+          }, 
+
+          ]  
+
+          }, 
+
+          { 
+
+          id:5, 
+
+          category:'Outdoor', 
+
+          title:'outdoor', 
+
+          anchor:'#outdoor', 
+
+          copy: 'for your patio paradise', 
+
+          mainImage:'images/homepage/20220802/FW32-33_HP_DK_2F.jpg?$staticlink$', 
+          tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2F.jpg?$staticlink$',
+          mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2F.jpg?$staticlink$',
+          altText:'outdoor', 
+
+          linktext:'Shop all Outdoor', 
+
+          ariaLabel:'outdoor', 
+
+          link:'/c/outdoor/', 
+
+          items:[ 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2E_1.png?$staticlink$', 
+
+          text:'outdoor sectionals', 
+
+          altText:'outdoor sectionals', 
+
+          ariaLabel:'outdoor sectionals', 
+
+          link:'/c/outdoor/patio-furniture/seating/sectionals/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2E_2.png?$staticlink$', 
+
+          text:'outdoor sofas & loveseats', 
+
+          altText:'outdoor sofas & loveseats', 
+
+          ariaLabel:'outdoor sofas & loveseats', 
+
+          link:'/c/outdoor/patio-furniture/seating/sofa-and-loveseats/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2E_3.png?$staticlink$', 
+
+          text:'outdoor conversation sets', 
+
+          altText:'outdoor conversation sets', 
+
+          ariaLabel:'outdoor conversation sets', 
+
+          link:'/c/outdoor/outdoor-sets/conversation-sets/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2E_4.png?$staticlink$', 
+
+          text:'outdoor seating', 
+
+          altText:'outdoor seating', 
+
+          ariaLabel:'outdoor seating', 
+
+          link:'/c/outdoor/outdoor-sets/seating-sets/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2E_5.png?$staticlink$', 
+
+          text:'outdoor dining', 
+
+          altText:'outdoor dining', 
+
+          ariaLabel:'outdoor dining', 
+
+          link:'/c/outdoor/outdoor-sets/outdoor-dining-sets/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2E_6.png?$staticlink$', 
+
+          text:'fire pits', 
+
+          altText:'fire pits', 
+
+          ariaLabel:'fire pits', 
+
+          link:'/c/outdoor/outdoor-accessories/fire-pits/' 
+
+          }, 
+
+          ]  
+
+          }, 
+
+          { 
+
+          id:6, 
+
+          category:'Home Office', 
+
+          title:'home office', 
+
+          anchor:'#homeoffice', 
+
+          copy: 'inspire zoom envy', 
+
+          mainImage:'images/homepage/20220802/FW32-33_HP_DK_2E.jpg?$staticlink$', 
+          tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2E.jpg?$staticlink$',
+          mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2E.jpg?$staticlink$',
+          altText:'home office', 
+
+          linktext:'Shop all Home office', 
+
+          ariaLabel:'home office', 
+
+          link:'/c/furniture/home-office/', 
+
+          items:[ 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2F_1.png?$staticlink$', 
+
+          text:'desks', 
+
+          altText:'desks', 
+
+          ariaLabel:'desks', 
+
+          link:'/c/furniture/home-office/desks/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2F_2.png?$staticlink$', 
+
+          text:'bookcases', 
+
+          altText:'bookcases', 
+
+          ariaLabel:'bookcases', 
+
+          link:'/c/furniture/home-office/bookcases/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2F_3.png?$staticlink$', 
+
+          text:'office chairs', 
+
+          altText:'office chairs', 
+
+          ariaLabel:'office chairs', 
+
+          link:'/c/furniture/home-office/office-chairs/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2F_4.png?$staticlink$', 
+
+          text:'office storage', 
+
+          altText:'office storage', 
+
+          ariaLabel:'office storage', 
+
+          link:'/c/furniture/home-office/office-storage/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2F_5.png?$staticlink$', 
+
+          text:'office sets', 
+
+          altText:'office sets', 
+
+          ariaLabel:'office sets', 
+
+          link:'/c/furniture/sets/home-office-sets/' 
+
+          }, 
+
+          { 
+
+          image:'images/homepage/20220712/BFIJ_HP_DK_2F_6.png?$staticlink$', 
+
+          text:'gaming', 
+
+          altText:'gaming', 
+
+          ariaLabel:'gaming', 
+
+          link:'/c/furniture/gaming/' 
+
+          }, 
+
+          ]  
+
+          }, 
+
+          ] 
+
+          }"
+      id="homepage-main"
+    >
+      <div>
+        <h3 class="homepage-h2">shop by category</h3>
+        <div class="stickey [ mb-2 ]">
+          <nav class="home__container">
+            <div
+              x-data="{ open: false }"
+              class="homepage__menu--mobile"
+              :class="open ? 'homepage__menu--mobile--open' : '' "
+              x-transition
+            >
+              <!-- Button -->
+              <div
+                type="button"
+                class="homepage__menu--mobile-btn"
+                @click="open = ! open"
+                :class="open ? 'homepage__menu--mobile-btn--gray' : '' "
+              >
+                <span>shop by category</span>
+                <svg
+                  version="1.2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  overflow="visible"
+                  preserveAspectRatio="none"
+                  viewBox="0 0 26 26"
+                  width="24"
+                  height="24"
+                  fill="inherit"
+                  :class=" open ? 'drop ' : '' "
+                >
+                  <g transform="translate(1, 1)">
+                    <path
+                      fill="inherit"
+                      d="m10.8788 17.657-1.41396-1.414 4.24196-4.243-4.24196-4.24298 1.41396-1.414 5.656 5.65698z"
+                      vector-effect="non-scaling-stroke"
+                    />
+                  </g>
+                </svg>
+              </div>
+
+              <!-- Panel -->
+              <div
+                x-show="open"
+                class="homepage__menu--mobile-panel"
+                x-collapse
+              >
+                <ul>
+                  <template x-for="category in categories" key="categories.id">
+                    <li @click="open = ! open">
+                      <a
+                        :href="category.link"
+                        x-text="category.category"
+                        style="color: var(--black-color)"
+                      ></a>
+                    </li>
+                  </template>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <nav class="homepage__menu--desktop">
+            <ul class="homepage__menu-list">
+              <template x-for="category in categories" key="categories.id">
+                <div
+                  class="homepage__menu-list-item"
+                  :class="{ 'active': tab === category.title }"
+                  x-on:click.prevent="tab = category.title"
+                  x-cloak
+                  x-text="category.category"
+                ></div>
+              </template>
+            </ul>
+          </nav>
+        </div>
+
+        <template x-for="category in categories" key="categories.id">
+          <section
+            class="
+              homepage__category
+              desktop
+              [
+              hotspot-image hotspot-v2-container
+              ]
+            "
+            x-show="tab === category.title"
+            x-cloak
+          >
+            <h2 class="category__h2" x-text="category.copy"></h2>
+            <a
+              class="category__link-container [ text-button ]"
+              :href="category.link"
+              :aria-label="category.ariaLabel"
+            >
+              <div class="" x-text="category.linktext"></div>
+              <svg
+                version="1.2"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                overflow="visible"
+                preserveAspectRatio="none"
+                viewBox="0 0 26 26"
+                width="24"
+                height="24"
+                fill="inherit"
+              >
+                <g transform="translate(1, 1)">
+                  <path
+                    fill="inherit"
+                    d="m10.8788 17.657-1.41396-1.414 4.24196-4.243-4.24196-4.24298 1.41396-1.414 5.656 5.65698z"
+                    vector-effect="non-scaling-stroke"
+                  />
+                </g>
+              </svg>
+            </a>
+            <div class="home__image-container category__image">
+              <img
+                :src="category.mainImage"
+                :alt="category.altText"
+                style="width: 100%"
+                height=""
+              />
+            </div>
+            <div class="category__items-container">
+              <template x-for="item in category.items">
+                <a
+                  class="category__item"
+                  :aria-label="item.ariaLabel"
+                  :href="item.link"
+                >
+                  <img
+                    class="category__item-image"
+                    :src="item.image"
+                    :alt="item.altText"
+                    height="115"
+                    loading="lazy"
+                  />
+                  <p class="category__item-text" x-text="item.text"></p>
+                </a>
+              </template>
+            </div>
+          </section>
+        </template>
+
+        <div class="big-flow padding-flow">
+          <template x-for="category in categories" key="categories.id">
+            <section class="homepage__category [ mobile ]" :id="category.title">
+              <h2 class="category__h2" x-text="category.copy"></h2>
+
+              <div class="home__image-container category__image">
+                <picture>
+                  <source
+                    :srcset="category.mainImage"
+                    media="(min-width: 486px)"
+                  />
+
+                  <img :src="category.mobileImg" alt="" loading="lazy" />
+                </picture>
+              </div>
+
+              <a
+                class="category__link-container text-button"
+                :href="category.link"
+              >
+                <div class="category__link" x-text="category.linktext"></div>
+                <svg
+                  version="1.2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  overflow="visible"
+                  preserveAspectRatio="none"
+                  viewBox="0 0 26 26"
+                  width="24"
+                  height="24"
+                  fill="inherit"
+                >
+                  <g transform="translate(1, 1)">
+                    <path
+                      fill="inherit"
+                      d="m10.8788 17.657-1.41396-1.414 4.24196-4.243-4.24196-4.24298 1.41396-1.414 5.656 5.65698z"
+                      vector-effect="non-scaling-stroke"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </section>
+          </template>
+        </div>
+      </div>
+    </section>
+
+    <!-- Scroller Section -->
+    <section
+      id="homepage-main"
+      x-data="{ 
+
+      sectionTite:'top deals', 
+
+      link: '/c/deals/', 
+
+      linkText:'shop all deals', 
+
+      altText:'shop all deals', 
+
+      ariaLabel:'shop all deals', 
+
+      items:[ 
+
+      { 
+
+      id: 1, 
+
+      image:'images/homepage/20220802/FW32-33_HP_DK_3A.jpg?$staticlink$', 
+
+      title:'Recliners under $600', 
+
+      link:'/c/furniture/living-room/recliners/?pmin=000.00&pmax=600.00', 
+
+      altText:'Recliners under $600', 
+
+      ariaLabel:'Recliners under $600' 
+
+      }, 
+
+      { 
+
+      id: 2, 
+
+      image:'images/homepage/20220802/FW32-33_HP_DK_3B.jpg?$staticlink$', 
+
+      title:'Ashley Sleep Starting at $129.99', 
+
+      link:'/c/mattresses/ashley-sleep/shop-all/', 
+
+      altText:'Ashley Sleep Starting at $129.99', 
+
+      ariaLabel:'Ashley Sleep Starting at $129.99' 
+
+      }, 
+
+      { 
+
+      id: 3, 
+
+      image:'images/homepage/20220802/FW32-33_HP_DK_3C.jpg?$staticlink$', 
+
+      title:'Bar Stools $120 and Under + Free Shipping*', 
+
+      link:'/c/furniture/kitchen-and-dining-room/bar-stools/?pmin=0.00&pmax=120.00', 
+
+      altText:'Bar Stools $120 and Under + Free Shipping*', 
+
+      ariaLabel:'Bar Stools $120 and Under + Free Shipping*' 
+
+      }, 
+
+      { 
+
+      id: 4, 
+
+      image:'images/homepage/20220802/FW32-33_HP_DK_3D.jpg?$staticlink$', 
+
+      title:'Loveseats Under $600', 
+
+      link:'/c/furniture/living-room/loveseats/?pmin=00.00&pmax=600.00', 
+
+      altText:'Loveseats Under $600', 
+
+      ariaLabel:'Loveseats Under $600' 
+
+      }, 
+
+      { 
+
+      id: 5, 
+
+      image:'images/homepage/20220802/FW32-33_HP_DK_3E.jpg?$staticlink$', 
+
+      title:'Kids Beds Under $500', 
+
+      link:'/c/kids/beds/?pmin=0.00&pmax=500.00', 
+
+      altText:'Kids Beds Under $500', 
+
+      ariaLabel:'Kids Beds Under $500' 
+
+      } 
+
+      ], 
+
+      scrollRight(){ 
+
+      $refs.scroll.scrollLeft += 200 
+
+      }, 
+
+      scrollLeft(){ 
+
+      $refs.scroll.scrollLeft -= 200 
+
+      }, 
+
+      }"
+    >
+      <div
+        class="
+          scroll_section
+          [
+          home-content
+          ]
+          [
+          hotspot-image hotspot-v2-container
+          ]
+        "
+      >
+        <h2 class="text-center" x-text="sectionTite"></h2>
+
+        <a
+          class="scroll_section_actions [ text-button ]"
+          :href="link"
+          :aria-label="ariaLabel"
+        >
+          <div class="" x-text="linkText"></div>
+          <svg
+            version="1.2"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            overflow="visible"
+            preserveAspectRatio="none"
+            viewBox="0 0 26 26"
+            width="24"
+            height="24"
+            fill="inherit"
+          >
+            <g transform="translate(1, 1)">
+              <path
+                fill="inherit"
+                d="m10.8788 17.657-1.41396-1.414 4.24196-4.243-4.24196-4.24298 1.41396-1.414 5.656 5.65698z"
+                vector-effect="non-scaling-stroke"
+              />
+            </g>
+          </svg>
+        </a>
+
+        <div x-ref="scroll" class="media-scroller snaps-inline">
+          <template x-for="item in items" key="item.id">
+            <div class="media-element">
+              <a :href="item.link" :aria-label="item.ariaLabel">
+                <img
+                  class="media-element-img"
+                  :src="item.image"
+                  width="324"
+                  loading="lazy"
+                />
+              </a>
+              <div class="media-element media-element-content">
+                <p class="title" x-text="item.title"></p>
+                <a href="item.link" :aria-label="item.ariaLabel">shop now</a>
+              </div>
+            </div>
+          </template>
+        </div>
+
+        <div class="slide-btn slide-btn-right" @click="scrollRight">
+          <svg
+            version="1.2"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            overflow="visible"
+            preserveAspectRatio="none"
+            viewBox="0 0 26 26"
+            width="24"
+            height="24"
+            fill="none"
+          >
+            <g transform="translate(1, 1)">
+              <path
+                fill="#363534"
+                d="m10.8788 17.657-1.41396-1.414 4.24196-4.243-4.24196-4.24298 1.41396-1.414 5.656 5.65698z"
+                vector-effect="non-scaling-stroke"
+                style="inherit"
+              />
+            </g>
+          </svg>
+        </div>
+
+        <div class="slide-btn slide-btn-left" @click="scrollLeft">
+          <svg
+            version="1.2"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            overflow="visible"
+            preserveAspectRatio="none"
+            viewBox="0 0 26 26"
+            width="24"
+            height="24"
+            fill="none"
+          >
+            <g transform="translate(1, 1)">
+              <path
+                fill="#363534"
+                d="m10.8788 17.657-1.41396-1.414 4.24196-4.243-4.24196-4.24298 1.41396-1.414 5.656 5.65698z"
+                vector-effect="non-scaling-stroke"
+                style="inherit"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- In Stock -->
+    <section
+      id="homepage-main"
+      x-data="{ 
+
+      items:[{ 
+      
+      id:1, 
+      
+      head:'in-stock & fast delivery', 
+      
+      subhead:'customer favorites', 
+      
+      link:'/c/deals/top-picks/', 
+      
+      ariaLabel:'shop in-stock', 
+      
+      text:'in-stock & fast delivery', 
+      
+      image: 'images/homepage/20220802/FW32-33_HP_DK_4A.jpg?$staticlink$',
+      
+      }, 
+      
+      { 
+      
+      id:2, 
+      
+      head:'free shipping', 
+      
+      subhead:'hundreds of styles available', 
+      
+      link:'/c/deals/free-shipping/', 
+      
+      ariaLabel:'shop free shipping', 
+      
+      text:'free shipping', 
+      
+      image: 'images/homepage/20220802/FW32-33_HP_DK_4B.jpg?$staticlink$',
+      
+      } 
+      
+      ] 
+      
+      }"
+    >
+      <div
+        class="instock [ home-content ] [ hotspot-image hotspot-v2-container ]"
+      >
+        <template x-for="item in items" id="item.id">
+          <div class="instock-item [ hotspot-image hotspot-v2-container ]">
+            <a href="item.link" :aria-label="item.ariaLabel">
+              <div
+                class="instock-item-img"
+                :style="'background-image: url(' + item.image + ')'"
+              >
+                <div class="instock-content">
+                  <div
+                    class="instock-content-subhead [ text-uppercase ]"
+                    x-text="item.subhead"
+                    style="text-align: center"
+                  ></div>
+                  <div
+                    class="instock-content-head [ text-lowercase ]"
+                    x-text="item.head"
+                    style="text-align: center"
+                  ></div>
+                </div>
+              </div>
+            </a>
+            <div>
+              <a
+                class="[ text-button flex-end ]"
+                :href="link"
+                :aria-label="item.ariaLabel"
+              >
+                <div class="" x-text="item.text"></div>
+                <svg
+                  version="1.2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  overflow="visible"
+                  preserveAspectRatio="none"
+                  viewBox="0 0 26 26"
+                  width="24"
+                  height="24"
+                  fill="inherit"
+                >
+                  <g transform="translate(1, 1)">
+                    <path
+                      fill="inherit"
+                      d="m10.8788 17.657-1.41396-1.414 4.24196-4.243-4.24196-4.24298 1.41396-1.414 5.656 5.65698z"
+                      vector-effect="non-scaling-stroke"
+                    />
+                  </g>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <!-- Feature Section -->
+    <section
+      x-data="{ 
+
+        title:'all things fall', 
+
+        linkText:'Shop Back to School Furniture', 
+
+        link:'/c/furniture/small-spaces/kids/', 
+
+        image: 'images/homepage/20220802/FW32-33_HP_DK_5.jpg?$staticlink$', 
+
+        altText:'Shop Back to School Furniture', 
+
+        items:[ 
+
+        { 
+
+        id:1, 
+
+        img:'images/homepage/20220802/FW32-33_HP_DK_5A.png?$staticlink$', 
+
+        text:'halloween decor', 
+
+        price:'', 
+
+        ariaLabel:'', 
+
+        link:'/c/fall/halloween/' 
+
+        }, 
+
+        { 
+
+        id:2, 
+
+        img:'images/homepage/20220802/FW32-33_HP_DK_5B.png?$staticlink$', 
+
+        text:'thanksgiving decor', 
+
+        price:'', 
+
+        ariaLabel:'', 
+
+        link:'/c/fall/thanksgiving/decor/' 
+
+        }, 
+
+        { 
+
+        id:3, 
+
+        img:'images/homepage/20220802/FW32-33_HP_DK_5C.png?$staticlink$', 
+
+        text:'fall entryway decor', 
+
+        price:'', 
+
+        ariaLabel:'', 
+
+        link:'/c/fall/entryway-decor/' 
+
+        }, 
+
+        ], 
+
+        }"
+      id="homepage-main"
+    >
+      <section class="home-content feature_section">
+        <h2 x-text="title" class="text-center margin-inline"></h2>
+        <div class="feature-content">
+          <div class="[ flex flex-col flex-8 ]">
+            <img
+              class="feature__img"
+              :src="image"
+              :alt="altText"
+              loading="lazy"
+            />
+            <a
+              class="[ text-button bg-grey flex-1 ]"
+              :href="link"
+              :aria-label="item.ariaLabel"
+            >
+              <div class="padding-block-1 ml-auto" x-text="linkText"></div>
+              <svg
+                version="1.2"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                overflow="visible"
+                preserveAspectRatio="none"
+                viewBox="0 0 26 26"
+                width="24"
+                height="24"
+                fill="inherit"
+              >
+                <g transform="translate(1, 1)">
+                  <path
+                    fill="inherit"
+                    d="m10.8788 17.657-1.41396-1.414 4.24196-4.243-4.24196-4.24298 1.41396-1.414 5.656 5.65698z"
+                    vector-effect="non-scaling-stroke"
+                  />
+                </g>
+              </svg>
+            </a>
+          </div>
+
+          <div class="feature__items [ flex-5 ]">
+            <template x-for="item in items" :key="item.id">
+              <div
+                class="
+                  feature__item
+                  [
+                  bg-grey
+                  ]
+                  [
+                  hotspot-image hotspot-v2-container
+                  ]
+                "
+              >
+                <div class="feature__item_img">
+                  <img :src="item.img" alt="" loading="lazy" />
+                </div>
+
+                <div class="feature__item_content">
+                  <p
+                    class="feature__item_text [ text-lowercase ]"
+                    x-text="item.text"
+                  ></p>
+                  <p
+                    class="feature__item_price [ text-lowercase ]"
+                    x-text="item.price"
+                  ></p>
+                  <a
+                    class="feature_actions text-button"
+                    :href="item.link"
+                    :aria-label="item.ariaLabel"
+                  >
+                    <div class="feature__link [ flex-end ]">shop all</div>
+                    <svg
+                      version="1.2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                      overflow="visible"
+                      preserveAspectRatio="none"
+                      viewBox="0 0 26 26"
+                      width="24"
+                      height="24"
+                      fill="inherit"
+                    >
+                      <g transform="translate(1, 1)">
+                        <path
+                          fill="inherit"
+                          d="m10.8788 17.657-1.41396-1.414 4.24196-4.243-4.24196-4.24298 1.41396-1.414 5.656 5.65698z"
+                          vector-effect="non-scaling-stroke"
+                        />
+                      </g>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- Scroller Section -->
+    <section
+      id="homepage-main"
+      x-data="{ 
+
+        sectionTite:'bedroom refresh', 
+        
+        link: '/c/furniture/bedroom/', 
+        
+        linkText:'shop bedroom', 
+        
+        altText:'shop bedroom', 
+        
+        ariaLabel:'shop bedroom', 
+        
+        items:[ 
+        
+        { 
+        
+        id: 1, 
+        
+        image:'images/homepage/20220802/FW32-33_HP_DK_6A.jpg?$staticlink$', 
+        
+        title:'Bedroom Sets to Match Your Style', 
+        
+        link:'/c/furniture/sets/bedroom-sets/', 
+        
+        altText:'Bedroom Sets to Match Your Style', 
+        
+        ariaLabel:'Bedroom Sets to Match Your Style' 
+        
+        }, 
+        
+        { 
+        
+        id: 2, 
+        
+        image:'images/homepage/20220802/FW32-33_HP_DK_6B.jpg?$staticlink$', 
+        
+        title:'Ultra Cozy Comforter Sets Under $100 + Free Shipping*', 
+        
+        link:'/c/bedding/comforter-sets/?pmin=0.00&pmax=100.00', 
+        
+        altText:'Ultra Cozy Comforter Sets Under $100 + Free Shipping*', 
+        
+        ariaLabel:'Ultra Cozy Comforter Sets Under $100 + Free Shipping*' 
+        
+        }, 
+        
+        { 
+        
+        id: 3, 
+        
+        image:'images/homepage/20220802/FW32-33_HP_DK_6C.jpg?$staticlink$', 
+        
+        title:'Two Is Better Than One: Shop Lamp Sets + Free Shipping*', 
+        
+        link:'/c/lighting/lamp-sets/', 
+        
+        altText:'Two Is Better Than One: Shop Lamp Sets + Free Shipping*', 
+        
+        ariaLabel:'Two Is Better Than One: Shop Lamp Sets + Free Shipping*' 
+        
+        }, 
+        
+        { 
+        
+        id: 4, 
+        
+        image:'images/homepage/20220802/FW32-33_HP_DK_6D.jpg?$staticlink$', 
+        
+        title:'Accent Chairs Under $500', 
+        
+        link:'/c/furniture/living-room/living-room-chairs/?pmin=00.00&pmax=500.00', 
+        
+        altText:'Accent Chairs Under $500', 
+        
+        ariaLabel:'Accent Chairs Under $500' 
+        
+        }, 
+        
+        { 
+        
+        id: 5, 
+        
+        image:'images/homepage/20220802/FW32-33_HP_DK_6E.jpg?$staticlink$', 
+        
+        title:'Top Rated Pillows and Toppers Starting at $39.99 + Free Shipping*', 
+        
+        link:'/c/bedding/essentials/', 
+        
+        altText:'Top Rated Pillows and Toppers Starting at $39.99 + Free Shipping*', 
+        
+        ariaLabel:'Top Rated Pillows and Toppers Starting at $39.99 + Free Shipping*' 
+        
+        } 
+        
+        ], 
+        
+        scrollRight(){ 
+        
+        $refs.scroll.scrollLeft += 200 
+        
+        }, 
+        
+        scrollLeft(){ 
+        
+        $refs.scroll.scrollLeft -= 200 
+        
+        }, 
+        
+        }"
+    >
+      <div
+        class="
+          scroll_section
+          [
+          home-content
+          ]
+          [
+          hotspot-image hotspot-v2-container
+          ]
+        "
+      >
+        <h2 class="text-center" x-text="sectionTite"></h2>
+
+        <a
+          class="scroll_section_actions [ text-button ]"
+          :href="link"
+          :aria-label="ariaLabel"
+        >
+          <div class="" x-text="linkText"></div>
+          <svg
+            version="1.2"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            overflow="visible"
+            preserveAspectRatio="none"
+            viewBox="0 0 26 26"
+            width="24"
+            height="24"
+            fill="inherit"
+          >
+            <g transform="translate(1, 1)">
+              <path
+                fill="inherit"
+                d="m10.8788 17.657-1.41396-1.414 4.24196-4.243-4.24196-4.24298 1.41396-1.414 5.656 5.65698z"
+                vector-effect="non-scaling-stroke"
+              />
+            </g>
+          </svg>
+        </a>
+
+        <div x-ref="scroll" class="media-scroller snaps-inline">
+          <template x-for="item in items" key="item.id">
+            <div class="media-element">
+              <a :href="item.link" :aria-label="item.ariaLabel">
+                <img
+                  class="media-element-img"
+                  :src="item.image"
+                  width="324"
+                  loading="lazy"
+                />
+              </a>
+              <div class="media-element media-element-content">
+                <p class="title" x-text="item.title"></p>
+                <a href="item.link" :aria-label="item.ariaLabel">shop now</a>
+              </div>
+            </div>
+          </template>
+        </div>
+
+        <div class="slide-btn slide-btn-right" @click="scrollRight">
+          <svg
+            version="1.2"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            overflow="visible"
+            preserveAspectRatio="none"
+            viewBox="0 0 26 26"
+            width="24"
+            height="24"
+            fill="none"
+          >
+            <g transform="translate(1, 1)">
+              <path
+                fill="#363534"
+                d="m10.8788 17.657-1.41396-1.414 4.24196-4.243-4.24196-4.24298 1.41396-1.414 5.656 5.65698z"
+                vector-effect="non-scaling-stroke"
+                style="inherit"
+              />
+            </g>
+          </svg>
+        </div>
+
+        <div class="slide-btn slide-btn-left" @click="scrollLeft">
+          <svg
+            version="1.2"
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+            overflow="visible"
+            preserveAspectRatio="none"
+            viewBox="0 0 26 26"
+            width="24"
+            height="24"
+            fill="none"
+          >
+            <g transform="translate(1, 1)">
+              <path
+                fill="#363534"
+                d="m10.8788 17.657-1.41396-1.414 4.24196-4.243-4.24196-4.24298 1.41396-1.414 5.656 5.65698z"
+                vector-effect="non-scaling-stroke"
+                style="inherit"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Corprate -->
+
+    <section
+      id="homepage-main"
+      x-data="{
+                    items:[
+                        {
+                            id:1,
+                            icon:'',
+                            title:'sweepstakes',
+                            text:'Enter for a chance to win [fill in the blank with a sweepstake offer]',
+                            link:'',
+														ariaLabel:'',
+                        },
+                        {
+                            id:2,
+                            icon:'',
+                            title:'corporate social responsibility',
+                            text:'see what we’re doing to help our employees, environment and community',
+                            link:'',
+														ariaLabel:'',
+                        },
+                        {
+                            id:3,
+                            icon:'',
+                            title:'hope to dream',
+                            text:'Every child should have a good night’s sleep and a bed to call their own.',
+                            link:'',
+														ariaLabel:'',
+                        },
+                    ]
+                }"
+    >
+      <div class="home-content corporate-one">
+        <template x-for="item in items" key="item.id">
+          <div
+            class="
+              corporate-one__item
+              text-center
+              [
+              hotspot-image hotspot-v2-container
+              ]
+            "
+            style="text-align: center"
+          >
+            <img :src="item.icon" alt="" loading="lazy" />
+            <h3 x-text="item.title"></h3>
+            <p class="margin-inline" x-text="item.text"></p>
+            <a :href="item.link" :aria-label="item.ariaLabel">learn more</a>
+          </div>
+        </template>
+      </div>
+    </section>
+
+    <!-- Corprate 2 -->
+
+    <section
+      id="homepage-main"
+      x-data="{
+                    items:[
+                        {
+                            id:1,
+                            icon:'',
+                            title:'Price match guarantee',
+                            text:'Find our products at a lower price, we’ll match it',
+                            link:'',
+														ariaLabel:'',
+                        },
+                        {
+                            id:2,
+                            icon:'',
+                            title:'Refer a Friend',
+                            text:'Share with a friend, save with a friend',
+                            link:'',
+														ariaLabel:'',
+                        },
+                        {
+                            id:3,
+                            icon:'',
+                            title:'Orange Rewards',
+                            text:'get great perks + earn rewards on your purchase',
+                            link:'',
+														ariaLabel:'',
+                        },
+                        {
+                            id:4,
+                            icon:'',
+                            title:'This is Home Your Way',
+                            text:'Lorem ipsum dolor sit amet, Maximum 2 lines',
+                            link:'',
+														ariaLabel:'',
+                        },
+                    ]
+                }"
+    >
+      <div class="home-content corporate-two">
+        <template x-for="item in items" key="item.id">
+          <div
+            class="
+              corporate-two__item
+              text-center
+              [
+              hotspot-image hotspot-v2-container
+              ]
+            "
+            style="text-align: center"
+          >
+            <img :src="item.icon" alt="" loading="lazy" />
+            <h3 x-text="item.title" class="[ text-lowercase m-0 ]"></h3>
+            <p class="margin-inline" x-text="item.text"></p>
+            <a :href="item.link" :aria-label="item.ariaLabel">learn more</a>
+          </div>
+        </template>
+      </div>
+    </section>
+  </body>
+</html>

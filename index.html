@@ -1488,19 +1488,19 @@
       id="homepage-main"
     >
       <div
-        class="
-          subheroAd
-          [
-          padding-block-2
-          bg-black
-          text-center text-light
-          ]
-          [
-          hotspot-image hotspot-v2-container
-          ]
-        "
+        class="subheroAd [ padding-block-2 bg-black text-center text-light ]"
       >
-        <div class="subheroAd-container [ home-content ]">
+        <div
+          class="
+            subheroAd-container
+            [
+            home-content
+            ]
+            [
+            hotspot-image hotspot-v2-container
+            ]
+          "
+        >
           <a :aria-label="ariaLabel" :href="link" style="color: unset">
             <div>
               <p
@@ -1745,7 +1745,9 @@
           </div>
 
           <p class="finacing-small-text" x-text="details"></p>
-          <div class="[ finacing-button ]">
+          <div
+            class="[ finacing-button ] [ hotspot-image hotspot-v2-container ]"
+          >
             <a class="[ finacing ][ text-button ]" :aria-label="ariaLabel">
               <p class="finance-dk2-pq" x-text="linkText"></p>
               <svg
@@ -2599,12 +2601,20 @@
                 height=""
               />
             </div>
-            <div class="category__items-container">
+            <div
+              class="
+                category__items-container
+                [
+                hotspot-image hotspot-v2-container
+                ]
+              "
+            >
               <template x-for="item in category.items">
                 <a
                   class="category__item"
                   :aria-label="item.ariaLabel"
                   :href="item.link"
+                  :aria-label="item.ariaLabel"
                 >
                   <img
                     class="category__item-image"
@@ -2622,7 +2632,18 @@
 
         <div class="big-flow padding-flow">
           <template x-for="category in categories" key="categories.id">
-            <section class="homepage__category [ mobile ]" :id="category.title">
+            <section
+              class="
+                homepage__category
+                [
+                hotspot-image hotspot-v2-container
+                ]
+                [
+                mobile
+                ]
+              "
+              :id="category.title"
+            >
               <h2 class="category__h2" x-text="category.copy"></h2>
 
               <div class="home__image-container category__image">
@@ -2639,6 +2660,7 @@
               <a
                 class="category__link-container text-button"
                 :href="category.link"
+                :aria-label="category.ariaLabel"
               >
                 <div class="category__link" x-text="category.linktext"></div>
                 <svg
@@ -2822,7 +2844,7 @@
 
         <div x-ref="scroll" class="media-scroller snaps-inline">
           <template x-for="item in items" key="item.id">
-            <div class="media-element">
+            <div class="media-element [ hotspot-image hotspot-v2-container ]">
               <a :href="item.link" :aria-label="item.ariaLabel">
                 <img
                   class="media-element-img"
@@ -2831,7 +2853,14 @@
                   loading="lazy"
                 />
               </a>
-              <div class="media-element media-element-content">
+              <div
+                class="
+                  media-element media-element-content
+                  [
+                  hotspot-image hotspot-v2-container
+                  ]
+                "
+              >
                 <p class="title" x-text="item.title"></p>
                 <a href="item.link" :aria-label="item.ariaLabel">shop now</a>
               </div>
@@ -2956,7 +2985,7 @@
                 </div>
               </div>
             </a>
-            <div>
+            <div class="[ hotspot-image hotspot-v2-container ]">
               <a
                 class="[ text-button flex-end ]"
                 :href="link"
@@ -3002,6 +3031,8 @@
         image: 'images/homepage/20220802/FW32-33_HP_DK_5.jpg?$staticlink$', 
 
         altText:'Shop Back to School Furniture', 
+
+        ariaLabel:'',
 
         items:[ 
 
@@ -3061,7 +3092,16 @@
       <section class="home-content feature_section">
         <h2 x-text="title" class="text-center margin-inline"></h2>
         <div class="feature-content">
-          <div class="[ flex flex-col flex-8 ]">
+          <div
+            class="
+              [
+              flex flex-col flex-8
+              ]
+              [
+              hotspot-image hotspot-v2-container
+              ]
+            "
+          >
             <img
               class="feature__img"
               :src="image"
@@ -3071,7 +3111,7 @@
             <a
               class="[ text-button bg-grey flex-1 ]"
               :href="link"
-              :aria-label="item.ariaLabel"
+              :aria-label="ariaLabel"
             >
               <div class="padding-block-1 ml-auto" x-text="linkText"></div>
               <svg
@@ -3098,22 +3138,19 @@
 
           <div class="feature__items [ flex-5 ]">
             <template x-for="item in items" :key="item.id">
-              <div
-                class="
-                  feature__item
-                  [
-                  bg-grey
-                  ]
-                  [
-                  hotspot-image hotspot-v2-container
-                  ]
-                "
-              >
+              <div class="feature__item [ bg-grey ]">
                 <div class="feature__item_img">
                   <img :src="item.img" alt="" loading="lazy" />
                 </div>
 
-                <div class="feature__item_content">
+                <div
+                  class="
+                    feature__item_content
+                    [
+                    hotspot-image hotspot-v2-container
+                    ]
+                  "
+                >
                   <p
                     class="feature__item_text [ text-lowercase ]"
                     x-text="item.text"
@@ -3311,7 +3348,7 @@
 
         <div x-ref="scroll" class="media-scroller snaps-inline">
           <template x-for="item in items" key="item.id">
-            <div class="media-element">
+            <div class="media-element [ hotspot-image hotspot-v2-container ]">
               <a :href="item.link" :aria-label="item.ariaLabel">
                 <img
                   class="media-element-img"

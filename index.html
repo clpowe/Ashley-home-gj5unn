@@ -31,7 +31,7 @@
               hero__content
               ]
               [
-              bg-cream
+              bg-grey
               padding-block-2 padding-inline-2
               ]
               [
@@ -84,7 +84,12 @@
 
     <!-- CSS -->
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+      @media screen and (max-width: 767px) {
+        .signup-offer p {
+          width: auto !important;
+          line-height: normal !important;
+        }
+      }
 
       :root {
         --white-color: #f3f3f3;
@@ -870,7 +875,7 @@
         position: relative;
         overflow: hidden;
         max-height: 693px;
-        background-color: var(--cream-color);
+        background-color: var(--grey-200);
       }
 
       .home__image {
@@ -1481,9 +1486,9 @@
     <section
       x-data="{
         subText:'Buy any qualifying mattress, get $150 off^ your bedroom purchase of $1,000 or more.',
-        text:'Shop Mattresses',
-        link:'/c/deals/sale-bedroom/',
-        ariaLabel:'Buy any qualifying mattress, get $150 off^ your bedroom purchase of $1,000 or more'
+    text:'Shop Mattresses',
+    link:'/c/deals/sale-bedroom/',
+    ariaLabel:'Buy any qualifying mattress, get $150 off^ your bedroom purchase of $1,000 or more'
       }"
       id="homepage-main"
     >
@@ -1541,14 +1546,14 @@
     <section
       x-data="{
         image:'',
-        subhead:'SPECIAL FINANCING OFFER',
-        head:'Interest Free Financing through August 2027**',
-        details:'$3,999 minimum purchase required for Ashley Advatnage&trade; Synchrony purchases. Subject to credit approval. 60 equal monthly payments required. Click details for more information.',
-        link:'https://etail.mysynchrony.com/eapply/eapply.action?uniqueId=565510A04C0A508AC067D9B072C9D4F57DB34A98269D02B5&preQual=Y&siteCode=ASHLEYHOMEHUPQ',
-        linkText:'see if you prequalify',
-        ariaLabel:'prequalify now',
-        detailsLink: '/coupons-deals-and-offers/',
-        detailsariaLabel:'Finance Details',
+    subhead:'SPECIAL FINANCING OFFER',
+    head:'Interest Free Financing through August 2027**',
+    details:'$3,999 minimum purchase required for Ashley Advatnage&trade; Synchrony purchases. Subject to credit approval. 60 equal monthly payments required. Click details for more information.',
+    link:'https://etail.mysynchrony.com/eapply/eapply.action?uniqueId=565510A04C0A508AC067D9B072C9D4F57DB34A98269D02B5&preQual=Y&siteCode=ASHLEYHOMEHUPQ',
+    linkText:'see if you prequalify',
+    ariaLabel:'prequalify now',
+    detailsLink: '/coupons-deals-and-offers/',
+    detailsariaLabel:'Finance Details',
       }"
       id="homepage-main"
     >
@@ -1785,697 +1790,697 @@
     <section
       x-data="{ tab: 'bedroom', 
 
-          shown: false, 
-
-          categories:[ 
-
-          { 
-
-          id:1, 
-
-          category:'Bedroom', 
-
-          title:'bedroom', 
-
-          anchor:'#bedroom', 
-
-          copy: 'new restful retreat', 
-
-          mainImage:'images/homepage/20220802/FW32-33_HP_DK_2B.jpg?$staticlink$', 
-          tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2B.jpg?$staticlink$',
-          mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2B.jpg?$staticlink$',
-          altText:'bedroom', 
-
-          linktext:'shop all bedroom', 
-
-          ariaLabel:'bedroom', 
-
-          link:'/c/bedroom/', 
-
-          items:[ 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2A_1.png?$staticlink$', 
-
-          text:'bedroom sets', 
-
-          altText:'bedroom sets', 
-
-          ariaLabel:'bedroom sets', 
-
-          link:'/c/furniture/sets/bedroom-sets/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2A_2.png?$staticlink$', 
-
-          text:'beds', 
-
-          altText:'beds', 
-
-          ariaLabel:'beds', 
-
-          link:'/c/furniture/bedroom/beds/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2A_3.png?$staticlink$', 
-
-          text:'headboards', 
-
-          altText:'headboards', 
-
-          ariaLabel:'headboards', 
-
-          link:'/c/furniture/bedroom/headboards/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2A_4.png?$staticlink$', 
-
-          text:'dressers & chests', 
-
-          altText:'dressers & chests', 
-
-          ariaLabel:'dressers & chests', 
-
-          link:'/c/furniture/bedroom/dressers/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2A_5.png?$staticlink$', 
-
-          text:'mirrored dressers', 
-
-          altText:'mirrored dressers', 
-
-          ariaLabel:'mirrored dressers', 
-
-          link:'/c/furniture/bedroom/dressers/mirrored/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2A_6.png?$staticlink$', 
-
-          text:'nightstands', 
-
-          altText:'nightstands', 
-
-          ariaLabel:'nightstands', 
-
-          link:'/c/furniture/bedroom/nightstands/' 
-
-          }, 
-
-          ]  
-
-          }, 
-
-          { 
-
-          id:2, 
-
-          category:'Living Room', 
-
-          title:'living room', 
-
-          anchor:'#livingroom', 
-
-          copy: 'for the most lived-in room', 
-
-          mainImage:'images/homepage/20220802/FW32-33_HP_DK_2D.jpg?$staticlink$', 
-          tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2D.jpg?$staticlink$',
-          mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2D.jpg?$staticlink$',
-          altText:'living room', 
-
-          linktext:'Shop all living room', 
-
-          ariaLabel:'living room', 
-
-          link:'/c/furniture/living-room/', 
-
-          items:[ 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2B_1.png?$staticlink$', 
-
-          text:'sectionals', 
-
-          altText:'sectionals', 
-
-          ariaLabel:'sectionals', 
-
-          link:'/c/furniture/living-room/sectional-sofas/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2B_2.png?$staticlink$', 
-
-          text:'sofas & couches', 
-
-          altText:'sofas & couches', 
-
-          ariaLabel:'sofas & couches', 
-
-          link:'/c/furniture/living-room/sofas/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2B_3.png?$staticlink$', 
-
-          text:'loveseats', 
-
-          altText:'loveseats', 
-
-          ariaLabel:'loveseats', 
-
-          link:'/c/furniture/living-room/loveseats/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2B_4.png?$staticlink$', 
-
-          text:'reclining furniture', 
-
-          altText:'reclining furniture', 
-
-          ariaLabel:'reclining furniture', 
-
-          link:'/c/furniture/living-room/reclining-furniture/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2B_5.png?$staticlink$', 
-
-          text:'coffee tables', 
-
-          altText:'coffee tables', 
-
-          ariaLabel:'coffee tables', 
-
-          link:'/c/furniture/living-room/coffee-tables/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2B_6.png?$staticlink$', 
-
-          text:'tv stands', 
-
-          altText:'tv stands', 
-
-          ariaLabel:'tv stands', 
-
-          link:'/c/furniture/living-room/tv-stands/' 
-
-          }, 
-
-          ]  
-
-          }, 
-
-          { 
-
-          id:3, 
-
-          category:'Dining', 
-
-          title:'diningroom', 
-
-          anchor:'#diningroom', 
-
-          copy: 'please, pass the style', 
-
-          mainImage:'images/homepage/20220802/FW32-33_HP_DK_2A.jpg?$staticlink$', 
-          tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2A.jpg?$staticlink$',
-          mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2A.jpg?$staticlink$',
-          altText:'dining room', 
-
-          linktext:'Shop all dining', 
-
-          ariaLabel:'dining room', 
-
-          link:'/c/furniture/kitchen-and-dining-room/', 
-
-          items:[ 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2C_1.png?$staticlink$', 
-
-          text:'dining room sets', 
-
-          altText:'dining room sets', 
-
-          ariaLabel:'dining room sets', 
-
-          link:'/c/furniture/sets/dining-room-sets/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2C_2.png?$staticlink$', 
-
-          text:'dining tables', 
-
-          altText:'dining tables', 
-
-          ariaLabel:'dining tables', 
-
-          link:'/c/furniture/kitchen-and-dining-room/dining-room-tables/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2C_3.png?$staticlink$', 
-
-          text:'dining chairs', 
-
-          altText:'dining chairs', 
-
-          ariaLabel:'dining chairs', 
-
-          link:'/c/furniture/kitchen-and-dining-room/chairs/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2C_4.png?$staticlink$', 
-
-          text:'dining benches', 
-
-          altText:'dining benches', 
-
-          ariaLabel:'dining benches', 
-
-          link:'/c/furniture/kitchen-and-dining-room/dining-benches/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2C_5.png?$staticlink$', 
-
-          text:'bar stools', 
-
-          altText:'bar stools', 
-
-          ariaLabel:'bar stools', 
-
-          link:'/c/furniture/kitchen-and-dining-room/bar-stools/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2C_6.png?$staticlink$', 
-
-          text:'dining storage', 
-
-          altText:'dining storage', 
-
-          ariaLabel:'dining storage', 
-
-          link:'/c/furniture/kitchen-and-dining-room/dining-storage/' 
-
-          }, 
-
-          ]  
-
-          }, 
-
-          { 
-
-          id:4, 
-
-          category:'Mattress', 
-
-          title:'mattress', 
-
-          anchor:'#mattress', 
-
-          copy: 'better sleep delivered', 
-
-          mainImage:'images/homepage/20220802/FW32-33_HP_DK_2C.jpg?$staticlink$', 
-          tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2C.jpg?$staticlink$',
-          mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2C.jpg?$staticlink$',
-          altText:'mattress', 
-
-          linktext:'Shop all mattress', 
-
-          ariaLabel:'mattress', 
-
-          link:'/c/mattresses/', 
-
-          items:[ 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2D_1.png?$staticlink$', 
-
-          text:'soft/plush support', 
-
-          altText:'soft/plush support', 
-
-          ariaLabel:'soft/plush support', 
-
-          link:'/c/mattresses/shop-all-mattresses/plush_support/'
-
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2D_2.png?$staticlink$', 
-
-          text:'medium support', 
-
-          altText:'medium support', 
-
-          ariaLabel:'medium support', 
-
-          link:'/c/mattresses/shop-all-mattresses/medium_support/'
-
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2D_3.png?$staticlink$', 
-
-          text:'firm support', 
-
-          altText:'firm support', 
-
-          ariaLabel:'firm support', 
-
-          link:'/c/mattresses/shop-all-mattresses/firm_support/'
-
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2D_4.png?$staticlink$', 
-
-          text:'memory foam', 
-
-          altText:'memory foam', 
-
-          ariaLabel:'memory foam', 
-
-          link:'/c/mattresses/shop-all-mattresses/memory_foam/'
-
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2D_5.png?$staticlink$', 
-
-          text:'inner spring', 
-
-          altText:'inner spring', 
-
-          ariaLabel:'inner spring', 
-
-          link:'/c/mattresses/shop-all-mattresses/inner_spring/'
-
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2D_6.png?$staticlink$', 
-
-          text:'hybrid', 
-
-          altText:'hybrid', 
-
-          ariaLabel:'hybrid', 
-
-          link:'/c/mattresses/shop-all-mattresses/hybrid/'
-
-
-          }, 
-
-          ]  
-
-          }, 
-
-          { 
-
-          id:5, 
-
-          category:'Outdoor', 
-
-          title:'outdoor', 
-
-          anchor:'#outdoor', 
-
-          copy: 'for your patio paradise', 
-
-          mainImage:'images/homepage/20220802/FW32-33_HP_DK_2F.jpg?$staticlink$', 
-          tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2F.jpg?$staticlink$',
-          mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2F.jpg?$staticlink$',
-          altText:'outdoor', 
-
-          linktext:'Shop all Outdoor', 
-
-          ariaLabel:'outdoor', 
-
-          link:'/c/outdoor/', 
-
-          items:[ 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2E_1.png?$staticlink$', 
-
-          text:'outdoor sectionals', 
-
-          altText:'outdoor sectionals', 
-
-          ariaLabel:'outdoor sectionals', 
-
-          link:'/c/outdoor/patio-furniture/seating/sectionals/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2E_2.png?$staticlink$', 
-
-          text:'outdoor sofas & loveseats', 
-
-          altText:'outdoor sofas & loveseats', 
-
-          ariaLabel:'outdoor sofas & loveseats', 
-
-          link:'/c/outdoor/patio-furniture/seating/sofa-and-loveseats/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2E_3.png?$staticlink$', 
-
-          text:'outdoor conversation sets', 
-
-          altText:'outdoor conversation sets', 
-
-          ariaLabel:'outdoor conversation sets', 
-
-          link:'/c/outdoor/outdoor-sets/conversation-sets/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2E_4.png?$staticlink$', 
-
-          text:'outdoor seating', 
-
-          altText:'outdoor seating', 
-
-          ariaLabel:'outdoor seating', 
-
-          link:'/c/outdoor/outdoor-sets/seating-sets/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2E_5.png?$staticlink$', 
-
-          text:'outdoor dining', 
-
-          altText:'outdoor dining', 
-
-          ariaLabel:'outdoor dining', 
-
-          link:'/c/outdoor/outdoor-sets/outdoor-dining-sets/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2E_6.png?$staticlink$', 
-
-          text:'fire pits', 
-
-          altText:'fire pits', 
-
-          ariaLabel:'fire pits', 
-
-          link:'/c/outdoor/outdoor-accessories/fire-pits/' 
-
-          }, 
-
-          ]  
-
-          }, 
-
-          { 
-
-          id:6, 
-
-          category:'Home Office', 
-
-          title:'home office', 
-
-          anchor:'#homeoffice', 
-
-          copy: 'inspire zoom envy', 
-
-          mainImage:'images/homepage/20220802/FW32-33_HP_DK_2E.jpg?$staticlink$', 
-          tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2E.jpg?$staticlink$',
-          mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2E.jpg?$staticlink$',
-          altText:'home office', 
-
-          linktext:'Shop all Home office', 
-
-          ariaLabel:'home office', 
-
-          link:'/c/furniture/home-office/', 
-
-          items:[ 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2F_1.png?$staticlink$', 
-
-          text:'desks', 
-
-          altText:'desks', 
-
-          ariaLabel:'desks', 
-
-          link:'/c/furniture/home-office/desks/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2F_2.png?$staticlink$', 
-
-          text:'bookcases', 
-
-          altText:'bookcases', 
-
-          ariaLabel:'bookcases', 
-
-          link:'/c/furniture/home-office/bookcases/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2F_3.png?$staticlink$', 
-
-          text:'office chairs', 
-
-          altText:'office chairs', 
-
-          ariaLabel:'office chairs', 
-
-          link:'/c/furniture/home-office/office-chairs/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2F_4.png?$staticlink$', 
-
-          text:'office storage', 
-
-          altText:'office storage', 
-
-          ariaLabel:'office storage', 
-
-          link:'/c/furniture/home-office/office-storage/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2F_5.png?$staticlink$', 
-
-          text:'office sets', 
-
-          altText:'office sets', 
-
-          ariaLabel:'office sets', 
-
-          link:'/c/furniture/sets/home-office-sets/' 
-
-          }, 
-
-          { 
-
-          image:'images/homepage/20220712/BFIJ_HP_DK_2F_6.png?$staticlink$', 
-
-          text:'gaming', 
-
-          altText:'gaming', 
-
-          ariaLabel:'gaming', 
-
-          link:'/c/furniture/gaming/' 
-
-          }, 
-
-          ]  
-
-          }, 
-
-          ] 
-
-          }"
+    shown: false, 
+    
+    categories:[ 
+    
+    { 
+    
+    id:1, 
+    
+    category:'Bedroom', 
+    
+    title:'bedroom', 
+    
+    anchor:'#bedroom', 
+    
+    copy: 'new restful retreat', 
+    
+    mainImage:'images/homepage/20220802/FW32-33_HP_DK_2B.jpg?$staticlink$', 
+    tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2B.jpg?$staticlink$',
+    mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2B.jpg?$staticlink$',
+    altText:'bedroom', 
+    
+    linktext:'shop all bedroom', 
+    
+    ariaLabel:'bedroom', 
+    
+    link:'/c/bedroom/', 
+    
+    items:[ 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2A_1.png?$staticlink$', 
+    
+    text:'bedroom sets', 
+    
+    altText:'bedroom sets', 
+    
+    ariaLabel:'bedroom sets', 
+    
+    link:'/c/furniture/sets/bedroom-sets/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2A_2.png?$staticlink$', 
+    
+    text:'beds', 
+    
+    altText:'beds', 
+    
+    ariaLabel:'beds', 
+    
+    link:'/c/furniture/bedroom/beds/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2A_3.png?$staticlink$', 
+    
+    text:'headboards', 
+    
+    altText:'headboards', 
+    
+    ariaLabel:'headboards', 
+    
+    link:'/c/furniture/bedroom/headboards/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2A_4.png?$staticlink$', 
+    
+    text:'dressers & chests', 
+    
+    altText:'dressers & chests', 
+    
+    ariaLabel:'dressers & chests', 
+    
+    link:'/c/furniture/bedroom/dressers/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2A_5.png?$staticlink$', 
+    
+    text:'mirrored dressers', 
+    
+    altText:'mirrored dressers', 
+    
+    ariaLabel:'mirrored dressers', 
+    
+    link:'/c/furniture/bedroom/dressers/mirrored/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2A_6.png?$staticlink$', 
+    
+    text:'nightstands', 
+    
+    altText:'nightstands', 
+    
+    ariaLabel:'nightstands', 
+    
+    link:'/c/furniture/bedroom/nightstands/' 
+    
+    }, 
+    
+    ]  
+    
+    }, 
+    
+    { 
+    
+    id:2, 
+    
+    category:'Living Room', 
+    
+    title:'living room', 
+    
+    anchor:'#livingroom', 
+    
+    copy: 'for the most lived-in room', 
+    
+    mainImage:'images/homepage/20220802/FW32-33_HP_DK_2D.jpg?$staticlink$', 
+    tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2D.jpg?$staticlink$',
+    mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2D.jpg?$staticlink$',
+    altText:'living room', 
+    
+    linktext:'Shop all living room', 
+    
+    ariaLabel:'living room', 
+    
+    link:'/c/furniture/living-room/', 
+    
+    items:[ 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2B_1.png?$staticlink$', 
+    
+    text:'sectionals', 
+    
+    altText:'sectionals', 
+    
+    ariaLabel:'sectionals', 
+    
+    link:'/c/furniture/living-room/sectional-sofas/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2B_2.png?$staticlink$', 
+    
+    text:'sofas & couches', 
+    
+    altText:'sofas & couches', 
+    
+    ariaLabel:'sofas & couches', 
+    
+    link:'/c/furniture/living-room/sofas/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2B_3.png?$staticlink$', 
+    
+    text:'loveseats', 
+    
+    altText:'loveseats', 
+    
+    ariaLabel:'loveseats', 
+    
+    link:'/c/furniture/living-room/loveseats/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2B_4.png?$staticlink$', 
+    
+    text:'reclining furniture', 
+    
+    altText:'reclining furniture', 
+    
+    ariaLabel:'reclining furniture', 
+    
+    link:'/c/furniture/living-room/reclining-furniture/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2B_5.png?$staticlink$', 
+    
+    text:'coffee tables', 
+    
+    altText:'coffee tables', 
+    
+    ariaLabel:'coffee tables', 
+    
+    link:'/c/furniture/living-room/coffee-tables/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2B_6.png?$staticlink$', 
+    
+    text:'tv stands', 
+    
+    altText:'tv stands', 
+    
+    ariaLabel:'tv stands', 
+    
+    link:'/c/furniture/living-room/tv-stands/' 
+    
+    }, 
+    
+    ]  
+    
+    }, 
+    
+    { 
+    
+    id:3, 
+    
+    category:'Dining', 
+    
+    title:'diningroom', 
+    
+    anchor:'#diningroom', 
+    
+    copy: 'please, pass the style', 
+    
+    mainImage:'images/homepage/20220802/FW32-33_HP_DK_2A.jpg?$staticlink$', 
+    tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2A.jpg?$staticlink$',
+    mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2A.jpg?$staticlink$',
+    altText:'dining room', 
+    
+    linktext:'Shop all dining', 
+    
+    ariaLabel:'dining room', 
+    
+    link:'/c/furniture/kitchen-and-dining-room/', 
+    
+    items:[ 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2C_1.png?$staticlink$', 
+    
+    text:'dining room sets', 
+    
+    altText:'dining room sets', 
+    
+    ariaLabel:'dining room sets', 
+    
+    link:'/c/furniture/sets/dining-room-sets/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2C_2.png?$staticlink$', 
+    
+    text:'dining tables', 
+    
+    altText:'dining tables', 
+    
+    ariaLabel:'dining tables', 
+    
+    link:'/c/furniture/kitchen-and-dining-room/dining-room-tables/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2C_3.png?$staticlink$', 
+    
+    text:'dining chairs', 
+    
+    altText:'dining chairs', 
+    
+    ariaLabel:'dining chairs', 
+    
+    link:'/c/furniture/kitchen-and-dining-room/chairs/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2C_4.png?$staticlink$', 
+    
+    text:'dining benches', 
+    
+    altText:'dining benches', 
+    
+    ariaLabel:'dining benches', 
+    
+    link:'/c/furniture/kitchen-and-dining-room/dining-benches/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2C_5.png?$staticlink$', 
+    
+    text:'bar stools', 
+    
+    altText:'bar stools', 
+    
+    ariaLabel:'bar stools', 
+    
+    link:'/c/furniture/kitchen-and-dining-room/bar-stools/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2C_6.png?$staticlink$', 
+    
+    text:'dining storage', 
+    
+    altText:'dining storage', 
+    
+    ariaLabel:'dining storage', 
+    
+    link:'/c/furniture/kitchen-and-dining-room/dining-storage/' 
+    
+    }, 
+    
+    ]  
+    
+    }, 
+    
+    { 
+    
+    id:4, 
+    
+    category:'Mattress', 
+    
+    title:'mattress', 
+    
+    anchor:'#mattress', 
+    
+    copy: 'better sleep delivered', 
+    
+    mainImage:'images/homepage/20220802/FW32-33_HP_DK_2C.jpg?$staticlink$', 
+    tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2C.jpg?$staticlink$',
+    mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2C.jpg?$staticlink$',
+    altText:'mattress', 
+    
+    linktext:'Shop all mattress', 
+    
+    ariaLabel:'mattress', 
+    
+    link:'/c/mattresses/', 
+    
+    items:[ 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2D_1.png?$staticlink$', 
+    
+    text:'soft/plush support', 
+    
+    altText:'soft/plush support', 
+    
+    ariaLabel:'soft/plush support', 
+    
+    link:'/c/mattresses/shop-all-mattresses/plush_support/'
+    
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2D_2.png?$staticlink$', 
+    
+    text:'medium support', 
+    
+    altText:'medium support', 
+    
+    ariaLabel:'medium support', 
+    
+    link:'/c/mattresses/shop-all-mattresses/medium_support/'
+    
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2D_3.png?$staticlink$', 
+    
+    text:'firm support', 
+    
+    altText:'firm support', 
+    
+    ariaLabel:'firm support', 
+    
+    link:'/c/mattresses/shop-all-mattresses/firm_support/'
+    
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2D_4.png?$staticlink$', 
+    
+    text:'memory foam', 
+    
+    altText:'memory foam', 
+    
+    ariaLabel:'memory foam', 
+    
+    link:'/c/mattresses/shop-all-mattresses/memory_foam/'
+    
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2D_5.png?$staticlink$', 
+    
+    text:'inner spring', 
+    
+    altText:'inner spring', 
+    
+    ariaLabel:'inner spring', 
+    
+    link:'/c/mattresses/shop-all-mattresses/inner_spring/'
+    
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2D_6.png?$staticlink$', 
+    
+    text:'hybrid', 
+    
+    altText:'hybrid', 
+    
+    ariaLabel:'hybrid', 
+    
+    link:'/c/mattresses/shop-all-mattresses/hybrid/'
+    
+    
+    }, 
+    
+    ]  
+    
+    }, 
+    
+    { 
+    
+    id:5, 
+    
+    category:'Outdoor', 
+    
+    title:'outdoor', 
+    
+    anchor:'#outdoor', 
+    
+    copy: 'for your patio paradise', 
+    
+    mainImage:'images/homepage/20220802/FW32-33_HP_DK_2F.jpg?$staticlink$', 
+    tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2F.jpg?$staticlink$',
+    mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2F.jpg?$staticlink$',
+    altText:'outdoor', 
+    
+    linktext:'Shop all Outdoor', 
+    
+    ariaLabel:'outdoor', 
+    
+    link:'/c/outdoor/', 
+    
+    items:[ 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2E_1.png?$staticlink$', 
+    
+    text:'outdoor sectionals', 
+    
+    altText:'outdoor sectionals', 
+    
+    ariaLabel:'outdoor sectionals', 
+    
+    link:'/c/outdoor/patio-furniture/seating/sectionals/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2E_2.png?$staticlink$', 
+    
+    text:'outdoor sofas & loveseats', 
+    
+    altText:'outdoor sofas & loveseats', 
+    
+    ariaLabel:'outdoor sofas & loveseats', 
+    
+    link:'/c/outdoor/patio-furniture/seating/sofa-and-loveseats/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2E_3.png?$staticlink$', 
+    
+    text:'outdoor conversation sets', 
+    
+    altText:'outdoor conversation sets', 
+    
+    ariaLabel:'outdoor conversation sets', 
+    
+    link:'/c/outdoor/outdoor-sets/conversation-sets/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2E_4.png?$staticlink$', 
+    
+    text:'outdoor seating', 
+    
+    altText:'outdoor seating', 
+    
+    ariaLabel:'outdoor seating', 
+    
+    link:'/c/outdoor/outdoor-sets/seating-sets/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2E_5.png?$staticlink$', 
+    
+    text:'outdoor dining', 
+    
+    altText:'outdoor dining', 
+    
+    ariaLabel:'outdoor dining', 
+    
+    link:'/c/outdoor/outdoor-sets/outdoor-dining-sets/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2E_6.png?$staticlink$', 
+    
+    text:'fire pits', 
+    
+    altText:'fire pits', 
+    
+    ariaLabel:'fire pits', 
+    
+    link:'/c/outdoor/outdoor-accessories/fire-pits/' 
+    
+    }, 
+    
+    ]  
+    
+    }, 
+    
+    { 
+    
+    id:6, 
+    
+    category:'Home Office', 
+    
+    title:'home office', 
+    
+    anchor:'#homeoffice', 
+    
+    copy: 'inspire zoom envy', 
+    
+    mainImage:'images/homepage/20220802/FW32-33_HP_DK_2E.jpg?$staticlink$', 
+    tabletImage:'images/homepage/20220802/FW32-33_HP_DK_2E.jpg?$staticlink$',
+    mobileImg:'images/homepage/20220802/FW32-33_HP_MB_2E.jpg?$staticlink$',
+    altText:'home office', 
+    
+    linktext:'Shop all Home office', 
+    
+    ariaLabel:'home office', 
+    
+    link:'/c/furniture/home-office/', 
+    
+    items:[ 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2F_1.png?$staticlink$', 
+    
+    text:'desks', 
+    
+    altText:'desks', 
+    
+    ariaLabel:'desks', 
+    
+    link:'/c/furniture/home-office/desks/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2F_2.png?$staticlink$', 
+    
+    text:'bookcases', 
+    
+    altText:'bookcases', 
+    
+    ariaLabel:'bookcases', 
+    
+    link:'/c/furniture/home-office/bookcases/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2F_3.png?$staticlink$', 
+    
+    text:'office chairs', 
+    
+    altText:'office chairs', 
+    
+    ariaLabel:'office chairs', 
+    
+    link:'/c/furniture/home-office/office-chairs/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2F_4.png?$staticlink$', 
+    
+    text:'office storage', 
+    
+    altText:'office storage', 
+    
+    ariaLabel:'office storage', 
+    
+    link:'/c/furniture/home-office/office-storage/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2F_5.png?$staticlink$', 
+    
+    text:'office sets', 
+    
+    altText:'office sets', 
+    
+    ariaLabel:'office sets', 
+    
+    link:'/c/furniture/sets/home-office-sets/' 
+    
+    }, 
+    
+    { 
+    
+    image:'images/homepage/20220712/BFIJ_HP_DK_2F_6.png?$staticlink$', 
+    
+    text:'gaming', 
+    
+    altText:'gaming', 
+    
+    ariaLabel:'gaming', 
+    
+    link:'/c/furniture/gaming/' 
+    
+    }, 
+    
+    ]  
+    
+    }, 
+    
+    ] 
+    
+    }"
       id="homepage-main"
     >
       <div>
@@ -2528,7 +2533,7 @@
                   <template x-for="category in categories" key="categories.id">
                     <li @click="open = ! open">
                       <a
-                        :href="category.link"
+                        :href="category.anchor"
                         x-text="category.category"
                         style="color: var(--black-color)"
                       ></a>
@@ -2694,99 +2699,99 @@
       id="homepage-main"
       x-data="{ 
 
-      sectionTite:'top deals', 
+        sectionTite:'top deals', 
 
-      link: '/c/deals/', 
-
-      linkText:'shop all deals', 
-
-      altText:'shop all deals', 
-
-      ariaLabel:'shop all deals', 
-
-      items:[ 
-
-      { 
-
-      id: 1, 
-
-      image:'images/homepage/20220802/FW32-33_HP_DK_3A.jpg?$staticlink$', 
-
-      title:'Recliners under $600', 
-
-      link:'/c/furniture/living-room/recliners/?pmin=000.00&pmax=600.00', 
-
-      altText:'Recliners under $600', 
-
-      ariaLabel:'Recliners under $600' 
-
-      }, 
-
-      { 
-
-      id: 2, 
-
-      image:'images/homepage/20220802/FW32-33_HP_DK_3B.jpg?$staticlink$', 
-
-      title:'Ashley Sleep Starting at $129.99', 
-
-      link:'/c/mattresses/ashley-sleep/shop-all/', 
-
-      altText:'Ashley Sleep Starting at $129.99', 
-
-      ariaLabel:'Ashley Sleep Starting at $129.99' 
-
-      }, 
-
-      { 
-
-      id: 3, 
-
-      image:'images/homepage/20220802/FW32-33_HP_DK_3C.jpg?$staticlink$', 
-
-      title:'Bar Stools $120 and Under + Free Shipping*', 
-
-      link:'/c/furniture/kitchen-and-dining-room/bar-stools/?pmin=0.00&pmax=120.00', 
-
-      altText:'Bar Stools $120 and Under + Free Shipping*', 
-
-      ariaLabel:'Bar Stools $120 and Under + Free Shipping*' 
-
-      }, 
-
-      { 
-
-      id: 4, 
-
-      image:'images/homepage/20220802/FW32-33_HP_DK_3D.jpg?$staticlink$', 
-
-      title:'Loveseats Under $600', 
-
-      link:'/c/furniture/living-room/loveseats/?pmin=00.00&pmax=600.00', 
-
-      altText:'Loveseats Under $600', 
-
-      ariaLabel:'Loveseats Under $600' 
-
-      }, 
-
-      { 
-
-      id: 5, 
-
-      image:'images/homepage/20220802/FW32-33_HP_DK_3E.jpg?$staticlink$', 
-
-      title:'Kids Beds Under $500', 
-
-      link:'/c/kids/beds/?pmin=0.00&pmax=500.00', 
-
-      altText:'Kids Beds Under $500', 
-
-      ariaLabel:'Kids Beds Under $500' 
-
-      } 
-
-      ], 
+        link: '/c/deals/', 
+        
+        linkText:'shop all deals', 
+        
+        altText:'shop all deals', 
+        
+        ariaLabel:'shop all deals', 
+        
+        items:[ 
+        
+        { 
+        
+        id: 1, 
+        
+        image:'images/homepage/20220802/FW32-33_HP_DK_3A.jpg?$staticlink$', 
+        
+        title:'Recliners under $600', 
+        
+        link:'/c/furniture/living-room/recliners/?pmin=000.00&pmax=600.00', 
+        
+        altText:'Recliners under $600', 
+        
+        ariaLabel:'Recliners under $600' 
+        
+        }, 
+        
+        { 
+        
+        id: 2, 
+        
+        image:'images/homepage/20220802/FW32-33_HP_DK_3B.jpg?$staticlink$', 
+        
+        title:'Ashley Sleep Starting at $129.99', 
+        
+        link:'/c/mattresses/ashley-sleep/shop-all/', 
+        
+        altText:'Ashley Sleep Starting at $129.99', 
+        
+        ariaLabel:'Ashley Sleep Starting at $129.99' 
+        
+        }, 
+        
+        { 
+        
+        id: 3, 
+        
+        image:'images/homepage/20220802/FW32-33_HP_DK_3C.jpg?$staticlink$', 
+        
+        title:'Bar Stools $120 and Under + Free Shipping*', 
+        
+        link:'/c/furniture/kitchen-and-dining-room/bar-stools/?pmin=0.00&pmax=120.00', 
+        
+        altText:'Bar Stools $120 and Under + Free Shipping*', 
+        
+        ariaLabel:'Bar Stools $120 and Under + Free Shipping*' 
+        
+        }, 
+        
+        { 
+        
+        id: 4, 
+        
+        image:'images/homepage/20220802/FW32-33_HP_DK_3D.jpg?$staticlink$', 
+        
+        title:'Loveseats Under $600', 
+        
+        link:'/c/furniture/living-room/loveseats/?pmin=00.00&pmax=600.00', 
+        
+        altText:'Loveseats Under $600', 
+        
+        ariaLabel:'Loveseats Under $600' 
+        
+        }, 
+        
+        { 
+        
+        id: 5, 
+        
+        image:'images/homepage/20220802/FW32-33_HP_DK_3E.jpg?$staticlink$', 
+        
+        title:'Kids Beds Under $500', 
+        
+        link:'/c/kids/beds/?pmin=0.00&pmax=500.00', 
+        
+        altText:'Kids Beds Under $500', 
+        
+        ariaLabel:'Kids Beds Under $500' 
+        
+        } 
+        
+        ], 
 
       scrollRight(){ 
 
@@ -2921,45 +2926,45 @@
       id="homepage-main"
       x-data="{ 
 
-      items:[{ 
-      
-      id:1, 
-      
-      head:'in-stock & fast delivery', 
-      
-      subhead:'customer favorites', 
-      
-      link:'/c/deals/top-picks/', 
-      
-      ariaLabel:'shop in-stock', 
-      
-      text:'in-stock & fast delivery', 
-      
-      image: 'images/homepage/20220802/FW32-33_HP_DK_4A.jpg?$staticlink$',
-      
-      }, 
-      
-      { 
-      
-      id:2, 
-      
-      head:'free shipping', 
-      
-      subhead:'hundreds of styles available', 
-      
-      link:'/c/deals/free-shipping/', 
-      
-      ariaLabel:'shop free shipping', 
-      
-      text:'free shipping', 
-      
-      image: 'images/homepage/20220802/FW32-33_HP_DK_4B.jpg?$staticlink$',
-      
-      } 
-      
-      ] 
-      
-      }"
+        items:[{ 
+        
+        id:1, 
+        
+        head:'in-stock & fast delivery', 
+        
+        subhead:'customer favorites', 
+        
+        link:'/c/deals/top-picks/', 
+        
+        ariaLabel:'shop in-stock', 
+        
+        text:'in-stock & fast delivery', 
+        
+        image: 'images/homepage/20220802/FW32-33_HP_DK_4A.jpg?$staticlink$',
+        
+        }, 
+        
+        { 
+        
+        id:2, 
+        
+        head:'free shipping', 
+        
+        subhead:'hundreds of styles available', 
+        
+        link:'/c/deals/free-shipping/', 
+        
+        ariaLabel:'shop free shipping', 
+        
+        text:'free shipping', 
+        
+        image: 'images/homepage/20220802/FW32-33_HP_DK_4B.jpg?$staticlink$',
+        
+        } 
+        
+        ] 
+        
+        }"
     >
       <div
         class="instock [ home-content ] [ hotspot-image hotspot-v2-container ]"
@@ -3020,73 +3025,65 @@
 
     <!-- Feature Section -->
     <section
-      x-data="{ 
+    x-data="{ 
 
-        title:'all things fall', 
-
-        linkText:'Shop Back to School Furniture', 
-
-        link:'/c/furniture/small-spaces/kids/', 
-
-        image: 'images/homepage/20220802/FW32-33_HP_DK_5.jpg?$staticlink$', 
-
-        altText:'Shop Back to School Furniture', 
-
-        ariaLabel:'',
-
-        items:[ 
-
-        { 
-
-        id:1, 
-
-        img:'images/homepage/20220802/FW32-33_HP_DK_5A.png?$staticlink$', 
-
-        text:'halloween decor', 
-
-        price:'', 
-
-        ariaLabel:'', 
-
-        link:'/c/fall/halloween/' 
-
-        }, 
-
-        { 
-
-        id:2, 
-
-        img:'images/homepage/20220802/FW32-33_HP_DK_5B.png?$staticlink$', 
-
-        text:'thanksgiving decor', 
-
-        price:'', 
-
-        ariaLabel:'', 
-
-        link:'/c/fall/thanksgiving/decor/' 
-
-        }, 
-
-        { 
-
-        id:3, 
-
-        img:'images/homepage/20220802/FW32-33_HP_DK_5C.png?$staticlink$', 
-
-        text:'fall entryway decor', 
-
-        price:'', 
-
-        ariaLabel:'', 
-
-        link:'/c/fall/entryway-decor/' 
-
-        }, 
-
-        ], 
-
-        }"
+      title:'all things fall', 
+      
+      linkText:'Shop Back to School Furniture', 
+      
+      link:'/c/furniture/small-spaces/kids/', 
+      
+      image: 'images/homepage/20220802/FW32-33_HP_DK_5.jpg?$staticlink$', 
+      
+      altText:'Shop Back to School Furniture', 
+      
+      items:[ 
+      
+      { 
+      
+      id:1, 
+      
+      img:'images/homepage/20220802/FW32-33_HP_DK_5A.png?$staticlink$', 
+      
+      text:'halloween decor', 
+      
+      price:'', 
+      
+      link:'/c/fall/halloween/' 
+      
+      }, 
+      
+      { 
+      
+      id:2, 
+      
+      img:'images/homepage/20220802/FW32-33_HP_DK_5B.png?$staticlink$', 
+      
+      text:'thanksgiving decor', 
+      
+      price:'', 
+      
+      link:'/c/fall/thanksgiving/decor/' 
+      
+      }, 
+      
+      { 
+      
+      id:3, 
+      
+      img:'images/homepage/20220802/FW32-33_HP_DK_5C.png?$staticlink$', 
+      
+      text:'fall entryway decor', 
+      
+      price:'', 
+      
+      link:'/c/fall/entryway-decor/' 
+      
+      }, 
+      
+      ], 
+      
+      }"
       id="homepage-main"
     >
       <section class="home-content feature_section">
@@ -3290,7 +3287,7 @@
         
         } 
         
-        ], 
+        ],  
         
         scrollRight(){ 
         
@@ -3417,33 +3414,53 @@
 
     <section
       id="homepage-main"
-      x-data="{
-                    items:[
-                        {
-                            id:1,
-                            icon:'',
-                            title:'sweepstakes',
-                            text:'Enter for a chance to win [fill in the blank with a sweepstake offer]',
-                            link:'',
-														ariaLabel:'',
-                        },
-                        {
-                            id:2,
-                            icon:'',
-                            title:'corporate social responsibility',
-                            text:'see what we’re doing to help our employees, environment and community',
-                            link:'',
-														ariaLabel:'',
-                        },
-                        {
-                            id:3,
-                            icon:'',
-                            title:'hope to dream',
-                            text:'Every child should have a good night’s sleep and a bed to call their own.',
-                            link:'',
-														ariaLabel:'',
-                        },
-                    ]
+      x-data="{ 
+
+        items:[ 
+        
+        { 
+        
+        id:1, 
+        
+        icon:'images/homepage/20220712/ICON_MakingAnImpact.svg?$staticlink$', 
+        
+        title:'making an impact', 
+        
+        text:'How we’re giving back to our communities, teams, and planet.', 
+        
+        link:'/about-us/' 
+        
+        }, 
+        
+        { 
+        
+        id:2, 
+        
+        icon:'images/homepage/20220712/ICON_CSR.svg?$staticlink$', 
+        
+        title:'corporate social responsibility', 
+        
+        text:'Get the whole picture on what we’re doing to help our employees, environment, and community.', 
+        
+        link:'/about-us/corporate-social-responsibility/report/' 
+        
+        }, 
+        
+        { 
+        
+        id:3, 
+        
+        icon:'images/homepage/20220712/ICON_HopeToDream.svg?$staticlink$', 
+        
+        title:'hope to dream', 
+        
+        text:'Every child should have a good night’s sleep and a bed to call their own.', 
+        
+        link:'https://www.ahopetodream.com/' 
+        
+        }, 
+        
+        ]
                 }"
     >
       <div class="home-content corporate-one">
@@ -3472,40 +3489,40 @@
     <section
       id="homepage-main"
       x-data="{
-                    items:[
-                        {
-                            id:1,
-                            icon:'',
-                            title:'Price match guarantee',
-                            text:'Find our products at a lower price, we’ll match it',
-                            link:'',
-														ariaLabel:'',
-                        },
-                        {
-                            id:2,
-                            icon:'',
-                            title:'Refer a Friend',
-                            text:'Share with a friend, save with a friend',
-                            link:'',
-														ariaLabel:'',
-                        },
-                        {
-                            id:3,
-                            icon:'',
-                            title:'Orange Rewards',
-                            text:'get great perks + earn rewards on your purchase',
-                            link:'',
-														ariaLabel:'',
-                        },
-                        {
-                            id:4,
-                            icon:'',
-                            title:'This is Home Your Way',
-                            text:'Lorem ipsum dolor sit amet, Maximum 2 lines',
-                            link:'',
-														ariaLabel:'',
-                        },
-                    ]
+        items:[
+            {
+                id:1,
+                icon:'images/homepage/20220712/ICON_PriceMatchGuarantee.svg?$staticlink$',
+                title:'price match guarantee',
+                text:'',
+                link:'/price-match/',
+                ariaLabel:'price match guarantee',
+            },
+            {
+                id:2,
+                icon:'images/homepage/20220712/ICON_ReferAFriend.svg?$staticlink$',
+                title:'refer a friend',
+                text:'',
+                link:'/referafriend/',
+                ariaLabel:'refer a friend',
+            },
+            {
+                id:3,
+                icon:'images/homepage/20220712/ICON_ThisIsHomeYourWay.svg?$staticlink$',
+                title:'this is home your way',
+                text:'',
+                link:'/this-is-home-your-way/',
+                ariaLabel:'this is home your way',
+            },
+            {
+                id:4,
+                icon:'images/homepage/20220712/ICON_OrangeRewards.svg?$staticlink$',
+                title:'Orange Rewards',
+                text:'',
+                link:'/orange-rewards/',
+                ariaLabel:'Orange Rewards',
+            },
+        ]
                 }"
     >
       <div class="home-content corporate-two">
